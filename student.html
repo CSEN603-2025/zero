@@ -6,94 +6,13 @@
 -->
 <html>
 	<head>
-		<title>Student Sign Up</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-
-		<!-- Header -->
-		<header id="header">
-			<a href="index.html" class="title">Student</a>
-			<nav>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="student.html" class="active">Log In</a></li>
-				</ul>
-			</nav>
-		</header>
-
-		<!-- Wrapper -->
-		<!-- Wrapper -->
-		<div id="wrapper">
-
-			<!-- Main -->
-			<section id="main" class="wrapper">
-				<div class="inner">
-					<h1 class="major">Log Into Your Account</h1>
-						<section>
-							<form method="post" action="#">
-								<div class="field">
-									<div class="field half">
-										<label for="username">Username</label>
-										<input type="text" name="username" id="username" />
-										<br />
-									</div>
-
-									<div class="field">
-										<label for="password">Password</label>
-										<input type="password" name="password" id="password" />
-										<br />
-									</div>
-
-								</div>
-
-								<ul class="actions">
-									<li><a href="homepages.html" class="button">Log In</a></li>
-								</ul>
-							</form>
-						</section>
-				</div>
-			</section>
-		</div>
-
-		<!-- Footer -->
-		<footer id="footer" class="wrapper alt">
-			<div class="inner">
-				<ul class="menu">
-					<li>&copy; Untitled. All rights reserved.</li>
-				</ul>
-			</div>
-		</footer>
-
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-
-	</body>
-
-	<!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
 		<title>Student Dashboard | GUC Internship</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			/* Custom additions */
+			/* Custom additions matching Hyperspace style */
 			.card {
 				background: rgba(255, 255, 255, 0.05);
 				border-radius: 4px;
@@ -103,8 +22,12 @@
 			}
 			.filters {
 				display: flex;
+				flex-wrap: wrap;
 				gap: 1rem;
 				margin-bottom: 2rem;
+			}
+			.filters .field {
+				margin-bottom: 0;
 			}
 			.status-pending { color: #ffcc00; }
 			.status-accepted { color: #00ff88; }
@@ -127,13 +50,37 @@
 				border: 1px solid #ffa4de;
 				width: 80%;
 				max-width: 800px;
+				position: relative;
 			}
 			.close {
 				color: #aaa;
-				float: right;
+				position: absolute;
+				right: 1rem;
+				top: 1rem;
 				font-size: 28px;
 				font-weight: bold;
 				cursor: pointer;
+			}
+			.file-upload {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+				margin: 1rem 0;
+			}
+			.file-upload-label {
+				cursor: pointer;
+				padding: 0.5rem 1rem;
+				background: #ffa4de;
+				color: #1a1a2e;
+				border-radius: 4px;
+				transition: background 0.3s;
+			}
+			.file-upload-label:hover {
+				background: #ff8ad4;
+			}
+			.file-name {
+				font-size: 0.9rem;
+				color: #aaa;
 			}
 		</style>
 	</head>
@@ -158,7 +105,7 @@
 			<!-- Main Content -->
 			<section id="main" class="wrapper">
 				<div class="inner">
-					<!-- Profile Section (Req 12,14) -->
+					<!-- Profile Section -->
 					<section id="profile">
 						<h1 class="major">My Profile</h1>
 						<div class="card">
@@ -177,10 +124,6 @@
 										<input type="number" id="semester" name="semester" min="1" max="12" />
 									</div>
 									<div class="col-12">
-										<label for="interests">Job Interests</label>
-										<input type="text" id="interests" name="interests" />
-									</div>
-									<div class="col-12">
 										<ul class="actions">
 											<li><input type="submit" value="Update Profile" class="primary" /></li>
 										</ul>
@@ -190,22 +133,40 @@
 						</div>
 					</section>
 
-					<!-- Internships Section (Req 15-21) -->
+					<!-- Internships Section -->
 					<section id="internships" class="wrapper style2 fade-up">
 						<div class="inner">
 							<h1 class="major">Available Internships</h1>
 							<div class="filters">
-								<input type="text" id="searchInternships" placeholder="Search by title or company" />
-								<select id="filterIndustry">
-									<option value="">All Industries</option>
-									<option value="tech">Technology</option>
-									<option value="finance">Finance</option>
-								</select>
-								<select id="filterType">
-									<option value="">All Types</option>
-									<option value="paid">Paid</option>
-									<option value="unpaid">Unpaid</option>
-								</select>
+								<div class="field">
+									<input type="text" id="searchInternships" placeholder="Search by title/company" />
+								</div>
+								<div class="field">
+									<select id="filterIndustry">
+										<option value="">All Industries</option>
+										<option value="tech">Technology</option>
+										<option value="finance">Finance</option>
+										<option value="healthcare">Healthcare</option>
+									</select>
+								</div>
+								<div class="field">
+									<select id="filterType">
+										<option value="">All Types</option>
+										<option value="paid">Paid</option>
+										<option value="unpaid">Unpaid</option>
+									</select>
+								</div>
+								<div class="field">
+									<select id="filterSalary">
+										<option value="">Any Salary</option>
+										<option value="1000">$1000+</option>
+										<option value="2000">$2000+</option>
+										<option value="3000">$3000+</option>
+									</select>
+								</div>
+								<div class="field">
+									<input type="text" id="filterSkills" placeholder="Filter by skills" />
+								</div>
 							</div>
 							
 							<div class="features">
@@ -213,10 +174,11 @@
 								<section class="card">
 									<h3>Frontend Developer</h3>
 									<p><strong>Company:</strong> TechCorp</p>
-									<p><strong>Duration:</strong> 3 months (Paid)</p>
-									<p><strong>Skills:</strong> HTML, CSS, JavaScript</p>
+									<p><strong>Duration:</strong> 3 months (Paid - $1200/month)</p>
+									<p><strong>Skills:</strong> HTML, CSS, JavaScript, React</p>
+									<p><strong>Description:</strong> Develop user interfaces for our web applications using modern frameworks...</p>
 									<ul class="actions">
-										<li><a href="#internship-details" class="button view-details" data-id="1">View Details</a></li>
+										<li><a href="#internship-details" class="button view-details" data-id="1">View Details & Apply</a></li>
 									</ul>
 								</section>
 								
@@ -224,16 +186,17 @@
 									<h3>Data Analyst</h3>
 									<p><strong>Company:</strong> FinanceCo</p>
 									<p><strong>Duration:</strong> 6 months (Unpaid)</p>
-									<p><strong>Skills:</strong> Python, Excel</p>
+									<p><strong>Skills:</strong> Python, Excel, SQL, Data Visualization</p>
+									<p><strong>Description:</strong> Analyze financial datasets and create reports for stakeholders...</p>
 									<ul class="actions">
-										<li><a href="#internship-details" class="button view-details" data-id="2">View Details</a></li>
+										<li><a href="#internship-details" class="button view-details" data-id="2">View Details & Apply</a></li>
 									</ul>
 								</section>
 							</div>
 						</div>
 					</section>
 
-					<!-- Applications Section (Req 22-23) -->
+					<!-- Applications Section -->
 					<section id="applications" class="wrapper style3 fade-up">
 						<div class="inner">
 							<h1 class="major">My Applications</h1>
@@ -244,6 +207,7 @@
 											<th>Company</th>
 											<th>Position</th>
 											<th>Status</th>
+											<th>Date Applied</th>
 											<th>Actions</th>
 										</tr>
 									</thead>
@@ -252,13 +216,15 @@
 											<td>TechCorp</td>
 											<td>Frontend Developer</td>
 											<td class="status-pending">PENDING</td>
-											<td><a href="#" class="button small">View</a></td>
+											<td>2025-04-15</td>
+											<td><a href="#" class="button small">View Details</a></td>
 										</tr>
 										<tr>
 											<td>FinanceCo</td>
 											<td>Data Analyst</td>
 											<td class="status-accepted">ACCEPTED</td>
-											<td><a href="#" class="button small">View</a></td>
+											<td>2025-03-28</td>
+											<td><a href="#" class="button small">View Details</a></td>
 										</tr>
 									</tbody>
 								</table>
@@ -269,32 +235,53 @@
 			</section>
 		</div>
 
-		<!-- Internship Details Modal (Req 19-21) -->
+		<!-- Internship Details Modal -->
 		<div id="internshipModal" class="modal">
 			<div class="modal-content">
 				<span class="close">&times;</span>
 				<h2 id="modalTitle">Internship Title</h2>
-				<p><strong>Company:</strong> <span id="modalCompany"></span></p>
-				<p><strong>Duration:</strong> <span id="modalDuration"></span></p>
-				<p><strong>Type:</strong> <span id="modalType"></span></p>
-				<p><strong>Salary:</strong> <span id="modalSalary"></span></p>
-				<p><strong>Skills Required:</strong> <span id="modalSkills"></span></p>
-				<div id="modalDescription"></div>
+				<div class="row">
+					<div class="col-6 col-12-xsmall">
+						<p><strong>Company:</strong> <span id="modalCompany"></span></p>
+						<p><strong>Duration:</strong> <span id="modalDuration"></span></p>
+						<p><strong>Type:</strong> <span id="modalType"></span></p>
+						<p><strong>Salary:</strong> <span id="modalSalary"></span></p>
+					</div>
+					<div class="col-6 col-12-xsmall">
+						<p><strong>Skills Required:</strong></p>
+						<ul id="modalSkills"></ul>
+					</div>
+				</div>
+				<div class="col-12">
+					<p><strong>Job Description:</strong></p>
+					<div id="modalDescription" class="box"></div>
+				</div>
 				
 				<h3>Apply for this Internship</h3>
 				<form id="applicationForm">
 					<div class="row gtr-uniform">
 						<div class="col-12">
-							<label for="cvUpload">Upload CV (PDF)</label>
-							<input type="file" id="cvUpload" accept=".pdf" />
+							<div class="file-upload">
+								<label for="cvUpload" class="file-upload-label">Upload CV (PDF)</label>
+								<input type="file" id="cvUpload" accept=".pdf" style="display: none;" />
+								<span id="cvFileName" class="file-name">No file selected</span>
+							</div>
 						</div>
 						<div class="col-12">
-							<label for="coverLetter">Cover Letter</label>
-							<textarea id="coverLetter" rows="4"></textarea>
+							<div class="file-upload">
+								<label for="coverLetterUpload" class="file-upload-label">Upload Cover Letter (Optional)</label>
+								<input type="file" id="coverLetterUpload" accept=".pdf,.doc,.docx" style="display: none;" />
+								<span id="coverLetterName" class="file-name">No file selected</span>
+							</div>
+						</div>
+						<div class="col-12">
+							<label for="additionalInfo">Additional Information</label>
+							<textarea id="additionalInfo" rows="4"></textarea>
 						</div>
 						<div class="col-12">
 							<ul class="actions">
 								<li><input type="submit" value="Submit Application" class="primary" /></li>
+								<li><input type="button" value="Cancel" class="button" id="cancelApplication" /></li>
 							</ul>
 						</div>
 					</div>
@@ -322,7 +309,7 @@
 		
 		<!-- Custom Script -->
 		<script>
-			// Modal functionality (Req 19)
+			// Modal functionality
 			const modal = document.getElementById('internshipModal');
 			const closeBtn = document.querySelector('.close');
 			
@@ -339,10 +326,25 @@
 				modal.style.display = 'none';
 			});
 			
+			document.getElementById('cancelApplication').addEventListener('click', () => {
+				modal.style.display = 'none';
+			});
+			
 			window.addEventListener('click', (e) => {
 				if (e.target === modal) {
 					modal.style.display = 'none';
 				}
+			});
+			
+			// File upload display
+			document.getElementById('cvUpload').addEventListener('change', function() {
+				const fileName = this.files[0] ? this.files[0].name : 'No file selected';
+				document.getElementById('cvFileName').textContent = fileName;
+			});
+			
+			document.getElementById('coverLetterUpload').addEventListener('change', function() {
+				const fileName = this.files[0] ? this.files[0].name : 'No file selected';
+				document.getElementById('coverLetterName').textContent = fileName;
 			});
 			
 			function loadInternshipDetails(id) {
@@ -353,9 +355,9 @@
 						company: 'TechCorp',
 						duration: '3 months',
 						type: 'Paid',
-						salary: '$1000/month',
-						skills: 'HTML, CSS, JavaScript',
-						description: 'Work on cutting-edge web applications using modern frameworks.'
+						salary: '$1200/month',
+						skills: ['HTML', 'CSS', 'JavaScript', 'React'],
+						description: 'Develop user interfaces for our web applications using modern frameworks. You will work closely with our design team to implement responsive and accessible components. Experience with React hooks and state management is a plus.'
 					},
 					'2': {
 						title: 'Data Analyst',
@@ -363,8 +365,8 @@
 						duration: '6 months',
 						type: 'Unpaid',
 						salary: 'N/A',
-						skills: 'Python, Excel, SQL',
-						description: 'Analyze financial data and create reports for stakeholders.'
+						skills: ['Python', 'Excel', 'SQL', 'Data Visualization'],
+						description: 'Analyze financial datasets and create reports for stakeholders. You will be responsible for cleaning data, identifying trends, and creating visualizations to communicate insights. Familiarity with Pandas and Matplotlib is required.'
 					}
 				};
 				
@@ -374,28 +376,75 @@
 				document.getElementById('modalDuration').textContent = internship.duration;
 				document.getElementById('modalType').textContent = internship.type;
 				document.getElementById('modalSalary').textContent = internship.salary;
-				document.getElementById('modalSkills').textContent = internship.skills;
+				
+				const skillsList = document.getElementById('modalSkills');
+				skillsList.innerHTML = '';
+				internship.skills.forEach(skill => {
+					const li = document.createElement('li');
+					li.textContent = skill;
+					skillsList.appendChild(li);
+				});
+				
 				document.getElementById('modalDescription').textContent = internship.description;
+				
+				// Reset form
+				document.getElementById('applicationForm').reset();
+				document.getElementById('cvFileName').textContent = 'No file selected';
+				document.getElementById('coverLetterName').textContent = 'No file selected';
 			}
 			
-			// Form submission (Req 20-21)
+			// Form submission
 			document.getElementById('applicationForm').addEventListener('submit', function(e) {
 				e.preventDefault();
+				
+				// Validate CV upload
+				const cvFile = document.getElementById('cvUpload').files[0];
+				if (!cvFile) {
+					alert('Please upload your CV');
+					return;
+				}
+				
+				// In a real app, you would send this data to a server
+				const formData = {
+					internshipId: document.querySelector('.view-details[data-id]').getAttribute('data-id'),
+					cvFile: cvFile.name,
+					coverLetter: document.getElementById('coverLetterUpload').files[0]?.name || 'None',
+					additionalInfo: document.getElementById('additionalInfo').value
+				};
+				
+				console.log('Application submitted:', formData);
 				alert('Application submitted successfully!');
 				modal.style.display = 'none';
-				// In a real app, you would send this data to a server
+				
+				// Add to applications table (in a real app, this would come from server response)
+				const applicationsTable = document.querySelector('#applications tbody');
+				const newRow = document.createElement('tr');
+				newRow.innerHTML = `
+					<td>${formData.internshipId === '1' ? 'TechCorp' : 'FinanceCo'}</td>
+					<td>${formData.internshipId === '1' ? 'Frontend Developer' : 'Data Analyst'}</td>
+					<td class="status-pending">PENDING</td>
+					<td>${new Date().toISOString().split('T')[0]}</td>
+					<td><a href="#" class="button small">View Details</a></td>
+				`;
+				applicationsTable.appendChild(newRow);
 			});
 			
-			// Filter functionality (Req 16-17)
+			// Filter functionality
 			document.getElementById('searchInternships').addEventListener('input', filterInternships);
 			document.getElementById('filterIndustry').addEventListener('change', filterInternships);
 			document.getElementById('filterType').addEventListener('change', filterInternships);
+			document.getElementById('filterSalary').addEventListener('change', filterInternships);
+			document.getElementById('filterSkills').addEventListener('input', filterInternships);
 			
 			function filterInternships() {
 				// Implementation would filter the displayed internships
-				console.log('Filtering internships...');
+				console.log('Filtering internships by:');
+				console.log('Search:', document.getElementById('searchInternships').value);
+				console.log('Industry:', document.getElementById('filterIndustry').value);
+				console.log('Type:', document.getElementById('filterType').value);
+				console.log('Salary:', document.getElementById('filterSalary').value);
+				console.log('Skills:', document.getElementById('filterSkills').value);
 			}
 		</script>
 	</body>
-</html>
 </html>
