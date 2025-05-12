@@ -15,7 +15,7 @@
 			<nav>
 				<ul>
 					<li><a href="index.html" class="active">Dashboard</a></li>
-					<li><a href="profile.html">My Profile</a></li>
+					<li><a href="student.html">My Profile</a></li>
 					<li><a href="internships.html">My Internships</a></li>
 					<li><a href="reports.html">My Reports</a></li>
 					<li><a href="courses.html">Courses</a></li>
