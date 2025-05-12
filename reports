@@ -23,7 +23,7 @@
 			<nav>
 				<ul>
 					<li><a href="index.html">Dashboard</a></li>
-					<li><a href="profile.html" class="active">My Profile</a></li>
+					<li><a href="student.html" class="active">My Profile</a></li>
 					<li><a href="internships.html">My Internships</a></li>
 					<li><a href="reports.html">My Reports</a></li>
 					<li><a href="courses.html">Courses</a></li>
