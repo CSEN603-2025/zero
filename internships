@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>My Internships | GUC Internship</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="title">GUC Internship System</a>
+			<nav>
+				<ul>
+					<li><a href="index.html" class="active">Dashboard</a></li>
+					<li><a href="student.html">My Profile</a></li>
+					<li><a href="internships.html">My Internships</a></li>
+					<li><a href="reports.html">My Reports</a></li>
+					<li><a href="courses.html">Courses</a></li>
+				</ul>
+			</nav>
+		</header>
+		<style>
+			.status-badge {
+				padding: 0.25rem 0.5rem;
+				border-radius: 4px;
+				font-size: 0.8rem;
+				font-weight: bold;
+			}
+			.status-current {
+				background: #5ab9ff;
+				color: #1a1a2e;
+			}
+			.status-completed {
+				background: #00ff88;
+				color: #1a1a2e;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header with same navigation as profile.html -->
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<h1 class="major">My Internships</h1>
+					
+					<!-- Search and Filters -->
+					<form method="post" action="#" id="internship-filter">
+						<div class="row gtr-uniform">
+							<div class="col-6 col-12-xsmall">
+								<input type="text" name="search" id="search" placeholder="Search by job title or company" />
+							</div>
+							<div class="col-3 col-12-xsmall">
+								<select name="status-filter" id="status-filter">
+									<option value="">All Statuses</option>
+									<option value="current">Current Internships</option>
+									<option value="completed">Completed Internships</option>
+								</select>
+							</div>
+							<div class="col-3 col-12-xsmall">
+								<input type="submit" value="Filter" class="primary fit" />
+							</div>
+						</div>
+					</form>
+
+					<!-- Internship List -->
+					<div class="table-wrapper">
+						<table>
+							<thead>
+								<tr>
+									<th>Company</th>
+									<th>Position</th>
+									<th>Duration</th>
+									<th>Status</th>
+									<th>Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>TechCorp</td>
+									<td>Frontend Developer</td>
+									<td>Jun 2024 - Aug 2024</td>
+									<td><span class="status-badge status-completed">Completed</span></td>
+									<td>
+										<ul class="actions small">
+											<li><a href="evaluation.html?id=1" class="button small">Evaluate</a></li>
+											<li><a href="reports.html?new=1" class="button small">Create Report</a></li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>FinanceCo</td>
+									<td>Data Analyst</td>
+									<td>Sep 2024 - Present</td>
+									<td><span class="status-badge status-current">Current</span></td>
+									<td>
+										<ul class="actions small">
+											<li><a href="#" class="button small disabled">Evaluate</a></li>
+											<li><a href="reports.html?new=2" class="button small">Create Report</a></li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- Same footer and scripts as index.html -->
+		<script>
+			// Filter functionality
+			document.getElementById('internship-filter').addEventListener('submit', function(e) {
+				e.preventDefault();
+				const searchTerm = document.getElementById('search').value.toLowerCase();
+				const statusFilter = document.getElementById('status-filter').value;
+				
+				document.querySelectorAll('tbody tr').forEach(row => {
+					const company = row.cells[0].textContent.toLowerCase();
+					const position = row.cells[1].textContent.toLowerCase();
+					const status = row.cells[3].textContent.toLowerCase();
+					
+					const matchesSearch = company.includes(searchTerm) || position.includes(searchTerm);
+					const matchesStatus = statusFilter === '' || status.includes(statusFilter);
+					
+					row.style.display = (matchesSearch && matchesStatus) ? '' : 'none';
+				});
+			});
+		</script>
+	</body>
+</html>
