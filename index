@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Student Dashboard | GUC Internship</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="title">GUC Internship System</a>
+			<nav>
+				<ul>
+					<li><a href="index.html" class="active">Dashboard</a></li>
+					<li><a href="profile.html">My Profile</a></li>
+					<li><a href="internships.html">My Internships</a></li>
+					<li><a href="reports.html">My Reports</a></li>
+					<li><a href="courses.html">Courses</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<h1 class="major">Student Dashboard</h1>
+					<section>
+						<div class="features">
+							<section>
+								<span class="icon solid major fa-user"></span>
+								<h3>My Profile</h3>
+								<p>View and update your personal information and academic details.</p>
+								<a href="profile.html" class="button">Go to Profile</a>
+							</section>
+							<section>
+								<span class="icon solid major fa-briefcase"></span>
+								<h3>My Internships</h3>
+								<p>Track your current and past internship applications.</p>
+								<a href="internships.html" class="button">View Internships</a>
+							</section>
+							<section>
+								<span class="icon solid major fa-file-alt"></span>
+								<h3>My Reports</h3>
+								<p>Create and manage your internship reports.</p>
+								<a href="reports.html" class="button">View Reports</a>
+							</section>
+							<section>
+								<span class="icon solid major fa-book"></span>
+								<h3>Courses</h3>
+								<p>Select courses relevant to your internship.</p>
+								<a href="courses.html" class="button">View Courses</a>
+							</section>
+						</div>
+					</section>
+				</div>
+			</section>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer" class="wrapper alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>&copy; GUC Internship System. All rights reserved.</li>
+				</ul>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
