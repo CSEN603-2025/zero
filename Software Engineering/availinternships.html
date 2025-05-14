@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>AvailableInternships</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="profiles.html">My Profile</a></li>
+                <li><a href="availinternships.html" class="active">Internships</a></li>
+                <li><a href="internshipsapplied.html">My Internships</a></li>
+                <li><a href="inboxs.html">Inbox</a></li>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <style>
+        .status-badge {
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .status-current {
+            background: #5ab9ff;
+            color: #1a1a2e;
+        }
+
+        .status-completed {
+            background: #00ff88;
+            color: #1a1a2e;
+        }
+    </style>
+  
+    <body class="is-preload">
+
+        <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Main -->
+            <section id="main" class="wrapper">
+                <div class="inner">
+                    <h1 class="major">Available Internships</h1>
+
+                    <!-- Search and Filters -->
+                    <form method="post" action="#" id="internship-filter">
+                        <div class="row gtr-uniform">
+                            
+                                <div class="col-6 col-12-xsmall">
+                                    <input type="text" name="search" id="search" placeholder="Search by Job title or Company name" />
+                                </div>
+                           
+
+                           
+                                <div>
+                                    <select name="ind-filter" id="ind-filter">
+                                        <option value="">All Industries</option>
+                                        <option value="op1">Technology</option>
+                                        <option value="op2">IT</option>
+                                        <option value="op3">Mangement</option>
+                                        <option value="op4">Business</option>
+                                        <option value="op5">Finance</option>
+                                        <option value="op6">Economics</option>
+                                    </select>
+                                </div>
+
+                                <div >
+                                    <select name="dur-filter" id="dur-filter">
+                                        <option value="">All Durations</option>
+                                        <option value="op1"> < 1 Month </option>
+                                        <option value="op2">1-1.5 Months</option>
+                                        <option value="op3">1.5-2 Months</option>
+                                        <option value="op4">2-2.5 Months</option>
+                                        <option value="op5">2.5-3 Months</option>
+                                        <option value="op6">>3 Months</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <select name="dur-filter" id="dur-filter">
+                                        <option value="">All Payments</option>
+                                        <option value="op1"> Paid</option>
+                                        <option value="op2">Unpaid</option>
+                                    </select>
+                                </div>
+                                
+                            
+                          </div>
+                 </form>
+
+        
+
+                    <!-- Internship List -->
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Company Name</th>
+                                    <th>Job Title</th>
+                                    <th>Industry</th>
+                                    <th>Duration</th>
+                                    <th>Payment</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>TechCorp</td>
+                                    <td>Frontend Developer</td>
+                                    <td>Technology,IT</td>
+                                    <td>2 Months</td>
+                                    <th>Paid</th>
+                                    <th>
+                                        <ul class="actions small">
+                                            <li><a href="internship1.html" class="button">Deatils</a></li>
+                                        </ul>
+                                    </th>
+                                </tr>
+
+                                <tr>
+                                    <td>FinanceCo</td>
+                                    <td>Data Analyst</td>
+                                    <td>Technology,Finance</td>
+                                    <td>4 Months</td>
+                                    <th><U></U>Unpaid</th>
+                                    <th>
+                                        <ul class="actions small">
+                                            <li><a href="internship2.html" class="button">Deatils</a></li>
+                                        </ul>
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer id="footer" class="wrapper alt">
+            <div class="inner">
+                <ul class="menu">
+                    <li>&copy; GUC Internship System. All rights reserved.</li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script>
+
+            document.getElementById('internship-filter').addEventListener('submit', function (e) {
+                e.preventDefault();
+                const searchTerm = document.getElementById('search').value.toLowerCase();
+                const statusFilter = document.getElementById('status-filter').value;
+
+                document.querySelectorAll('tbody tr').forEach(row => {
+                    const company = row.cells[0].textContent.toLowerCase();
+                    const position = row.cells[1].textContent.toLowerCase();
+                    const status = row.cells[3].textContent.toLowerCase();
+
+                    const matchesSearch = company.includes(searchTerm) || position.includes(searchTerm);
+                    const matchesStatus = statusFilter === '' || status.includes(statusFilter);
+
+                    row.style.display = (matchesSearch && matchesStatus) ? '' : 'none';
+                });
+            });
+        </script>
+    </body>
+</html>
