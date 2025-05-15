@@ -15,18 +15,30 @@
 	<body class="is-preload">
 
 		<!-- Header -->
+		<!-- Header -->
 		<header id="header">
 			<nav>
 				<ul>
-					<li><a href="profiles.html">My Profile</a></li>
-					<li><a href="availinternships.html" class="active">Internships</a></li>
-					<li><a href="internshipsapplied.html">My Internships</a></li>
-					<li><a href="inboxs.html">Inbox</a></li>
+					<li>
+						<div class="profile-dropdown">
+							<a href="profiles.html" class="profile-link">
+								<img src="images/pic01.jpg" alt="My Profile" class="profile-icon" />
+							</a>
+							<div class="dropdown-content">
+								<a href="profiles.html" class="dropdown-item">View Profile</a>
+								<a href="#" class="dropdown-item">Logout</a>
+							</div>
+						</div>
+					</li>
+					<li><a href="availinternships.html"class="active">Internships</a></li>
+					<li><a href="internshipsapplied.html" > My Internships</a></li>
+					<li>
+						<a href="inboxs.html" class="icon solid fa-bell"><span class="label">Inbox</span></a>
+					</li>
 					<li><a href="index.html">Home</a></li>
 				</ul>
 			</nav>
 		</header>
-
 		<!-- Wrapper -->
 		<div id="wrapper">
 
@@ -35,15 +47,15 @@
 				<div class="inner">
 					<h1 class="major">Data Analyst at FinanceCo</h1>
 					<section>
-						<h3> Duration: 4 Months</h3>
-						<h3> Payment Type: Unpaid</h3>
-						<h3> Expected Salary: None</h3>
-						<h3> Skills: Technology, Finance</a></h3>
+						<h4> Duration: 4 Months</h4>
+						<h4> Payment Type: Unpaid</h4>
+						<h4> Expected Salary: None</h4>
+						<h4> Skills: Technology, Finance</a></h4>
 					</section>
 
 					<section>
-						<h3>Description:</h3>
-						<h3>"........................."</h3>
+						<h4>Description:</h4>
+						<h4>"........................."</h4>
 					</section>
 
 					<section>
@@ -62,15 +74,7 @@
 
 		</div>
 
-		<!-- Footer -->
-		<footer id="footer" class="wrapper alt">
-			<div class="inner">
-				<ul class="menu">
-					<li>&copy; Untitled. All rights reserved.</li>
-					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</div>
-		</footer>
+		
 
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
