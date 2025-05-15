@@ -5,160 +5,345 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>My Profile</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+	<title>My Profile</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<style>
+		/* Profile Page Specific Styles */
+		body.profile-page .inner {
+			background: #ffffff;
+			border-radius: 8px;
+			padding: 2.5rem;
+			box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+			color: #000000; /* Force black text */
+		}
 
-		<!-- Header -->
-		<header id="header">
-			<a href="index.html" class="title">My Profile</a>
-			<nav>
-				<ul>
-					<li><a href="profiles.html" class="active">My Profile</a></li>
-					<li><a href="homepages.html">Homepage</a></li>
-					<li><a href="availinternships.html">Internships</a></li>
-					<li><a href="inboxs.html">Inbox</a></li>
-					<li><a href="index.html">Home</a></li>
-				</ul>
-			</nav>
-		</header>
+		.profile-header {
+			display: flex;
+			align-items: center;
+			margin-bottom: 2rem;
+			gap: 2rem;
+		}
 
-		<!-- Wrapper -->
-		<div id="wrapper">
+		.profile-pic {
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+			object-fit: cover;
+			border: 4px solid #6a0dad;
+		}
 
-			<!-- Main -->
-			<section id="main" class="wrapper">
-				<div class="inner">
-					<h1><span class="image left"><img src="images/pic01.jpg" alt="" /></span> <br /> <br />Nada Ahmed </h1>
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<h2>Job Interests:</h2>
-					<div class="col-6 col-12-small">
-						<input type="checkbox" id="demo-copy" name="demo-copy">
-						<label for="demo-copy">Business</label>
-					</div>
-					<div class="col-6 col-12-small">
-						<input type="checkbox" id="demo-human" name="demo-human" checked>
-						<label for="demo-human">Management</label>
-					</div>
-					<div class="col-6 col-12-small">
-						<input type="checkbox" id="demo-copy" name="demo-copy">
-						<label for="demo-copy">Finance</label>
-					</div>
-					<div class="col-6 col-12-small">
-						<input type="checkbox" id="demo-human" name="demo-human" checked>
-						<label for="demo-human">Economics</label>
-					</div>
-					<div class="col-6 col-12-small">
-						<input type="checkbox" id="demo-copy" name="demo-copy">
-						<label for="demo-copy">IT</label>
-					</div>
-					<div class="col-6 col-12-small">
-						<input type="checkbox" id="demo-human" name="demo-human" checked>
-						<label for="demo-human">Technology</label>
-					</div>
-					<div class="col-6 col-12-small">
-						<input type="checkbox" id="demo-copy" name="demo-copy">
-						<label for="demo-copy">Data Science</label>
-					</div>
-					<div class="col-6 col-12-small">
-						<input type="checkbox" id="demo-human" name="demo-human" checked>
-						<label for="demo-human">Chemistry</label>
-					</div>						<div class="col-6 col-12-small">
-						<input type="checkbox" id="demo-copy" name="demo-copy">
-						<label for="demo-copy">Law</label>
-					</div>
-					<div class="col-6 col-12-small">
-						<input type="checkbox" id="demo-human" name="demo-human" checked>
-						<label for="demo-human">Biology</label>
-					</div>
-					<div class="col-6 col-12-small">
-						<input type="checkbox" id="demo-copy" name="demo-copy">
-						<label for="demo-copy">Art</label>
-					</div>
-					<div class="col-6 col-12-small">
-						<input type="checkbox" id="demo-human" name="demo-human" checked>
-						<label for="demo-human">History</label>
-					</div>
+		.profile-title {
+			margin-bottom: 0.5rem;
+			color: #000000; /* Black text for name */
+		}
 
-					<br />
+		.profile-section {
+			margin-bottom: 2rem;
+			padding: 1.5rem;
+			background: #f8f9fa;
+			border-radius: 6px;
+			border-left: 4px solid #6a0dad;
+			color: #000000; /* Black text for sections */
+		}
 
-					<h2>
-						Previous Intenships: <textarea name="demo-message" id="demo-message" placeholder="Previous Internships" rows="4"></textarea>
-						<h4>Type all your Previous Internships' title, duration and company.</h4>
-					</h2>
-					<br />
-					<h2>
-						Part Time Jobs: <textarea name="demo-message" id="demo-message" placeholder="Part Time Jobs" rows="4"></textarea>
-						<h4> Type all your Part Time Jobs' title, duration and company.</h4>
-					</h2>
-					<br />
-					<h2>
-						College Activities:<textarea name="demo-message" id="demo-message" placeholder="Colege Activities" rows="4"></textarea>
-						<h4>Type all the College Activities you participated in (write "None" if you have not participated in any).</h4>
-					</h2>
-					<br />
-					<h2>
-						<label for="basic-dropdown">Major and Semester:</label>
-						<select id="basic-dropdown" name="basic-dropdown">
-							<option value="" disabled selected>Select an major and semester</option>
-							<option value="option1">Business Informatics(5)</option>
-							<option value="option2">Business Informatics(6)</option>
-							<option value="option3">Business Informatics(7)</option>
-							<option value="option4">Business Informatics(8)</option>
-							<option value="option5">Media Engineering and Technology(5)</option>
-							<option value="option6">Media Engineering and Technology(6)</option>
-							<option value="option7">Media Engineering and Technology(7)</option>
-							<option value="option8">Media Engineering and Technology(8)</option>
-							<option value="option9">Media Engineering and Technology(9)</option>
-							<option value="option10">Media Engineering and Technology(10)</option>
-						</select>
-					</h2>
-					<br />
-					<br />
-					<h2> Contact information: </h2>
-					<h2> Email: <textarea name="demo-message" id="demo-message" placeholder="Email" rows="1"></textarea></h2>
-					<h2> Phone number: <textarea name="demo-message" id="demo-message" placeholder="Phone Number" rows="1"></textarea></h2>
-					<br />
-					<ul class="actions">
-						<li><a href="profiles.html" class="button primary">Edit</a></li>
-					</ul>
+			.profile-section h2 {
+				color: #000000; /* Black text for headings */
+			}
 
-				</div>
-			</section>
+		.interests-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+			gap: 1rem;
+			margin-top: 1rem;
+		}
 
-		</div>
+		.interest-item {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			color: #000000; /* Black text for checkboxes */
+		}
 
-		<!-- Footer -->
-		<footer id="footer" class="wrapper alt">
+		textarea.form-control {
+			width: 100%;
+			padding: 0.75rem;
+			border: 1px solid #ddd;
+			border-radius: 4px;
+			resize: vertical;
+			margin-top: 0.5rem;
+			color: #000000; /* Black text for textareas */
+		}
+
+		select.form-control {
+			width: 100%;
+			padding: 0.75rem;
+			border: 1px solid #ddd;
+			border-radius: 4px;
+			margin-top: 0.5rem;
+			color: #000000; /* Black text for dropdown */
+		}
+
+		.button.primary {
+			background-color: #6a0dad;
+			border-color: #6a0dad;
+			color: white !important;
+		}
+
+			.button.primary:hover {
+				background-color: #5a0b9d;
+				border-color: #5a0b9d;
+			}
+	</style>
+</head>
+<body class="is-preload profile-page">
+
+	<!-- Header -->
+	<header id="header">
+		<nav>
+			<ul>
+				<li>
+					<div class="profile-dropdown">
+						<a href="profiles.html" class="profile-link">
+							<img src="images/pic01.jpg" alt="My Profile" class="profile-icon" />
+						</a>
+						<div class="dropdown-content">
+							<a href="profiles.html" class="dropdown-item">View Profile</a>
+							<a href="#" class="dropdown-item">Logout</a>
+						</div>
+					</div>
+				</li>
+				<li><a href="availinternships.html">Internships</a></li>
+				<li><a href="internshipsapplied.html"> My Internships</a></li>
+				<li>
+					<a href="inboxs.html" class="icon solid fa-bell"><span class="label">Inbox</span></a>
+				</li>
+				<li><a href="index.html">Home</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<section id="main" class="wrapper">
 			<div class="inner">
-				<ul class="menu">
-					<li>&copy; Untitled. All rights reserved.</li>
-					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
+				<!-- Profile Header -->
+				<div class="profile-header">
+					<img src="images/pic01.jpg" alt="Profile Picture" class="profile-pic" />
+					<div>
+						<h1 class="profile-title">Nada Ahmed</h1>
+						<a href="#" class="button small primary">Change Name</a>
+
+						<!-- Edit profile button removed as requested -->
+					</div>
+				</div>
+
+				<div class="profile-section">
+					<h2>Job Interests</h2>
+					<div class="interests-grid">
+						<label class="interest-item">
+							<input type="checkbox" checked>
+							<span class="checkmark"></span>
+							Business
+						</label>
+						<label class="interest-item">
+							<input type="checkbox" checked>
+							<span class="checkmark"></span>
+							Management
+						</label>
+						<label class="interest-item">
+							<input type="checkbox">
+							<span class="checkmark"></span>
+							Finance
+						</label>
+						<label class="interest-item">
+							<input type="checkbox" checked>
+							<span class="checkmark"></span>
+							Economics
+						</label>
+						<label class="interest-item">
+							<input type="checkbox">
+							<span class="checkmark"></span>
+							IT
+						</label>
+						<label class="interest-item">
+							<input type="checkbox" checked>
+							<span class="checkmark"></span>
+							Technology
+						</label>
+						<label class="interest-item">
+							<input type="checkbox">
+							<span class="checkmark"></span>
+							Data Science
+						</label>
+						<label class="interest-item">
+							<input type="checkbox" checked>
+							<span class="checkmark"></span>
+							Chemistry
+						</label>
+						<label class="interest-item">
+							<input type="checkbox">
+							<span class="checkmark"></span>
+							Law
+						</label>
+						<label class="interest-item">
+							<input type="checkbox" checked>
+							<span class="checkmark"></span>
+							Biology
+						</label>
+						<label class="interest-item">
+							<input type="checkbox">
+							<span class="checkmark"></span>
+							Art
+						</label>
+						<label class="interest-item">
+							<input type="checkbox" checked>
+							<span class="checkmark"></span>
+							History
+						</label>
+					</div>
+				</div>
+
+				<style>
+					/* Custom Checkbox Styles */
+					.interest-item {
+						display: flex;
+						align-items: center;
+						gap: 0.75rem;
+						cursor: pointer;
+						position: relative;
+						padding-left: 5px;
+						-webkit-user-select: none;
+						-moz-user-select: none;
+						-ms-user-select: none;
+						user-select: none;
+					}
+
+						/* Hide default checkbox */
+						.interest-item input {
+							position: absolute;
+							opacity: 0;
+							cursor: pointer;
+							height: 0;
+							width: 0;
+						}
+
+					/* Custom checkbox */
+					.checkmark {
+						position: relative;
+						height: 18px;
+						width: 18px;
+						background-color: #fff;
+						border: 2px solid #6a0dad;
+						border-radius: 4px;
+					}
+
+						/* Checkmark indicator */
+						.checkmark:after {
+							content: "";
+							position: absolute;
+							display: none;
+							left: 5px;
+							top: 1px;
+							width: 5px;
+							height: 10px;
+							border: solid white;
+							border-width: 0 2px 2px 0;
+							-webkit-transform: rotate(45deg);
+							-ms-transform: rotate(45deg);
+							transform: rotate(45deg);
+						}
+
+					/* Show checkmark when checked */
+					.interest-item input:checked ~ .checkmark:after {
+						display: block;
+					}
+
+					/* Change background when checked */
+					.interest-item input:checked ~ .checkmark {
+						background-color: #6a0dad;
+					}
+
+					/* Hover effect */
+					.interest-item:hover input ~ .checkmark {
+						background-color: #f0e6ff;
+					}
+
+					/* Grid layout */
+					.interests-grid {
+						display: grid;
+						grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+						gap: 0.75rem;
+						margin-top: 1rem;
+					}
+				</style>
+				<!-- Previous Internships -->
+				<div class="profile-section">
+					<h2>Previous Internships</h2>
+					<textarea class="form-control" placeholder="List your previous internships with title, duration and company" rows="4"></textarea>
+				</div>
+
+				<!-- Part Time Jobs -->
+				<div class="profile-section">
+					<h2>Part Time Jobs</h2>
+					<textarea class="form-control" placeholder="List your part time jobs with title, duration and company" rows="4"></textarea>
+				</div>
+
+				<!-- College Activities -->
+				<div class="profile-section">
+					<h2>College Activities</h2>
+					<textarea class="form-control" placeholder="List college activities you participated in (write 'None' if not applicable)" rows="4"></textarea>
+				</div>
+
+				<!-- Major and Semester -->
+				<div class="profile-section">
+					<h2>Major and Semester</h2>
+					<select class="form-control">
+						<option value="" disabled selected>Select your major and semester</option>
+						<option value="option1">Business Informatics (5)</option>
+						<option value="option2">Business Informatics (6)</option>
+						<option value="option3">Business Informatics (7)</option>
+						<option value="option4">Business Informatics (8)</option>
+						<option value="option5">Media Engineering and Technology (5)</option>
+						<option value="option6">Media Engineering and Technology (6)</option>
+						<option value="option7">Media Engineering and Technology (7)</option>
+						<option value="option8">Media Engineering and Technology (8)</option>
+						<option value="option9">Media Engineering and Technology (9)</option>
+						<option value="option10">Media Engineering and Technology (10)</option>
+					</select>
+				</div>
+
+				<!-- Contact Information -->
+				<div class="profile-section">
+					<h2>Contact Information</h2>
+					<div style="margin-bottom: 1rem;">
+						<label>Email</label>
+						<textarea class="form-control" placeholder="Your email address" rows="1"></textarea>
+					</div>
+					<div>
+						<label>Phone Number</label>
+						<textarea class="form-control" placeholder="Your phone number" rows="1"></textarea>
+					</div>
+				</div>
 			</div>
-		</footer>
+		</section>
 
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+	</div>
 
-	</body>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
 </html>
