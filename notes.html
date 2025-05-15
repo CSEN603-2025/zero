@@ -1,0 +1,61 @@
+
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<title>My Notes</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
+<link href="assets/css/main.css" rel="stylesheet"/>
+<noscript><link href="assets/css/noscript.css" rel="stylesheet"/></noscript>
+</head>
+<body class="is-preload">
+<header id="header">
+<a class="title" href="index.html">Student</a>
+<nav>
+<ul><li><a href="homepages.html">Homepage</a></li><li><a href="inboxs.html">Inbox</a></li><li><a href="assessments_integrated_final.html">Assessments</a></li><li><a href="workshops.html">Workshops</a></li><li><a href="profiles.html">Profile</a></li></ul>
+</nav>
+</header>
+<div id="wrapper">
+<section class="wrapper" id="main">
+<div class="inner">
+<h1 class="major">Take Notes</h1>
+<form action="#" method="post">
+<div class="field">
+<label for="noteArea">Write your notes below:</label>
+<textarea id="noteArea" name="noteArea" placeholder="Start typing..." rows="15"></textarea>
+</div>
+<ul class="actions">
+<li><a class="button" href="#">Save</a></li>
+<li><a class="button primary" href="#" onclick="downloadNotes()">Download</a></li>
+</ul>
+</form>
+</div>
+</section>
+</div>
+<footer class="wrapper alt" id="footer">
+<div class="inner">
+<ul class="menu">
+<li>© Untitled. All rights reserved.</li>
+</ul>
+</div>
+</footer>
+<script>
+function downloadNotes() {
+  const text = document.getElementById("noteArea").value;
+  const blob = new Blob([text], { type: 'text/plain' });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "my_notes.txt";
+  a.click();
+}
+</script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
