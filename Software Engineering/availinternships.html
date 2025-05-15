@@ -13,10 +13,22 @@
     <header id="header">
         <nav>
             <ul>
-                <li><a href="profiles.html">My Profile</a></li>
-                <li><a href="availinternships.html" class="active">Internships</a></li>
-                <li><a href="internshipsapplied.html">My Internships</a></li>
-                <li><a href="inboxs.html">Inbox</a></li>
+                <li>
+                    <div class="profile-dropdown">
+                        <a href="profiles.html" class="profile-link">
+                            <img src="images/pic01.jpg" alt="My Profile" class="profile-icon" />
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="profiles.html" class="dropdown-item">View Profile</a>
+                            <a href="#" class="dropdown-item">Logout</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="availinternships.html"class="active">Internships</a></li>
+                <li><a href="internshipsapplied.html" > My Internships</a></li>
+                <li>
+                    <a href="inboxs.html" class="icon solid fa-bell"><span class="label">Inbox</span></a>
+                </li>
                 <li><a href="index.html">Home</a></li>
             </ul>
         </nav>
@@ -39,7 +51,7 @@
             color: #1a1a2e;
         }
     </style>
-  
+
     <body class="is-preload">
 
         <!-- Wrapper -->
@@ -53,50 +65,50 @@
                     <!-- Search and Filters -->
                     <form method="post" action="#" id="internship-filter">
                         <div class="row gtr-uniform">
-                            
-                                <div class="col-6 col-12-xsmall">
-                                    <input type="text" name="search" id="search" placeholder="Search by Job title or Company name" />
-                                </div>
-                           
 
-                           
-                                <div>
-                                    <select name="ind-filter" id="ind-filter">
-                                        <option value="">All Industries</option>
-                                        <option value="op1">Technology</option>
-                                        <option value="op2">IT</option>
-                                        <option value="op3">Mangement</option>
-                                        <option value="op4">Business</option>
-                                        <option value="op5">Finance</option>
-                                        <option value="op6">Economics</option>
-                                    </select>
-                                </div>
+                            <div class="col-6 col-12-xsmall">
+                                <input type="text" name="search" id="search" placeholder="Search by Job title or Company name" />
+                            </div>
 
-                                <div >
-                                    <select name="dur-filter" id="dur-filter">
-                                        <option value="">All Durations</option>
-                                        <option value="op1"> < 1 Month </option>
-                                        <option value="op2">1-1.5 Months</option>
-                                        <option value="op3">1.5-2 Months</option>
-                                        <option value="op4">2-2.5 Months</option>
-                                        <option value="op5">2.5-3 Months</option>
-                                        <option value="op6">>3 Months</option>
-                                    </select>
-                                </div>
 
-                                <div>
-                                    <select name="dur-filter" id="dur-filter">
-                                        <option value="">All Payments</option>
-                                        <option value="op1"> Paid</option>
-                                        <option value="op2">Unpaid</option>
-                                    </select>
-                                </div>
-                                
-                            
-                          </div>
-                 </form>
 
-        
+                            <div>
+                                <select name="ind-filter" id="ind-filter">
+                                    <option value="">All Industries</option>
+                                    <option value="op1">Technology</option>
+                                    <option value="op2">IT</option>
+                                    <option value="op3">Mangement</option>
+                                    <option value="op4">Business</option>
+                                    <option value="op5">Finance</option>
+                                    <option value="op6">Economics</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <select name="dur-filter" id="dur-filter">
+                                    <option value="">All Durations</option>
+                                    <option value="op1"> < 1 Month </option>
+                                    <option value="op2">1-1.5 Months</option>
+                                    <option value="op3">1.5-2 Months</option>
+                                    <option value="op4">2-2.5 Months</option>
+                                    <option value="op5">2.5-3 Months</option>
+                                    <option value="op6">>3 Months</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <select name="dur-filter" id="dur-filter">
+                                    <option value="">All Payments</option>
+                                    <option value="op1"> Paid</option>
+                                    <option value="op2">Unpaid</option>
+                                </select>
+                            </div>
+
+
+                        </div>
+                    </form>
+
+
 
                     <!-- Internship List -->
                     <div class="table-wrapper">
@@ -143,13 +155,7 @@
             </section>
         </div>
 
-        <footer id="footer" class="wrapper alt">
-            <div class="inner">
-                <ul class="menu">
-                    <li>&copy; GUC Internship System. All rights reserved.</li>
-                </ul>
-            </div>
-        </footer>
+
 
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/jquery.scrollex.min.js"></script>
