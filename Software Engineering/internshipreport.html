@@ -24,37 +24,68 @@
     </header>
 
     <!-- Wrapper -->
-    <div id="wrapper">
-
-        <!-- Main -->
-        <section id="main" class="wrapper style2 fade-up">
-            <div class="inner">
-                <h1 class="major">Internship Report</h1>
-                <form method="post" action="#">
-                    <div class="row gtr-uniform">
-                        <div class="col-12">
-                            <h3>TechCorp - Frontend Developer (Jun 2024 - Aug 2024)</h3>
-                        </div>
-                        <div class="col-12">
-                            <input type="text" name="report-title" id="report-title" placeholder="Report Title" />
-                        </div>
-                        <div class="col-12">
-                            <textarea name="report-intro" id="report-intro" placeholder="Introduction..." rows="4"></textarea>
-                        </div>
-                        <div class="col-12">
-                            <textarea name="report-body" id="report-body" placeholder="Main content..." rows="8"></textarea>
-                        </div>
-                        <div class="col-12">
-                            <ul class="actions">
-                                <li><input type="submit" value="Save Draft" /></li>
-                                <li><a href="reportdone.html" class="button primary">Submit Final Report</a></li>
-                            </ul>
-                        </div>
+    <!-- Main -->
+    <section id="main" class="wrapper style2 fade-up">
+        <div class="inner">
+            <h1 class="major">Internship Report</h1>
+            <form method="post" action="#">
+                <div class="row gtr-uniform">
+                    <div class="col-12">
+                        <h3>TechCorp - Frontend Developer (Jun 2024 - Aug 2024)</h3>
                     </div>
-                </form>
-            </div>
-        </section>
-    </div>
+                    <div class="col-12">
+                        <input type="text" name="report-title" id="report-title" placeholder="Report Title" />
+                    </div>
+                    <div class="col-12">
+                        <textarea name="report-intro" id="report-intro" placeholder="Introduction..." rows="4"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <textarea name="report-body" id="report-body" placeholder="Main content..." rows="8"></textarea>
+                    </div>
+                </div>
+
+                <h2>Select Courses that helped during your internship:</h2>
+                <div class="col-6 col-12-medium">
+                    <ul class="alt">
+                        <li>
+                            <input type="checkbox" id="course-1" name="course-1" class="course-checkbox">
+                            <label for="course-1">MET501 - Web Development</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="course-2" name="course-2" class="course-checkbox" checked>
+                            <label for="course-2">MET502 - Database Systems</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="course-3" name="course-3" class="course-checkbox">
+                            <label for="course-3">MET503 - User Interface Design</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="course-4" name="course-4" class="course-checkbox">
+                            <label for="course-4">MET504 - Software Engineering</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="course-5" name="course-5" class="course-checkbox" checked>
+                            <label for="course-5">MET505 - Data Structures</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="course-6" name="course-6" class="course-checkbox">
+                            <label for="course-6">MET506 - Algorithms</label>
+                        </li>
+                    </ul>
+                </div>
+                <br />
+                <div class="col-12">
+                    <ul class="actions">
+                        <li><input type="submit" value="Save Draft" /></li>
+                        <li><a href="reportdone.html" class="button primary">Submit Final Report</a></li>
+                    </ul>
+                    </div>
+            </form>
+        </div>
+    </section>
+   
+
 
     <footer id="footer" class="wrapper alt">
         <div class="inner">
