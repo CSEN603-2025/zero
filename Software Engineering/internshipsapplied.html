@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>My Internships</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <ul>
+                <li>
+                    <div class="profile-dropdown">
+                        <a href="profiles.html" class="profile-link">
+                            <img src="images/pic01.jpg" alt="My Profile" class="profile-icon" />
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="profiles.html" class="dropdown-item">View Profile</a>
+                            <a href="#" class="dropdown-item">Logout</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="availinternships.html">Internships</a></li>
+                <li><a href="internshipsapplied.html" class="active"> My Internships</a></li>
+                <li>
+                    <a href="inboxs.html" class="icon solid fa-bell"><span class="label">Inbox</span></a>
+                </li>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <style>
+        .status-badge {
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .status-current {
+            background: #5ab9ff;
+            color: #1a1a2e;
+        }
+
+        .status-completed {
+            background: #00ff88;
+            color: #1a1a2e;
+        }
+    </style>
+    </head>
+    <body class="is-preload">
+
+        <!-- Header with same navigation as profile.html -->
+        <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Main -->
+            <section id="main" class="wrapper">
+                <div class="inner">
+                    <h1 class="major">My Internships</h1>
+
+                    <!-- Search and Filters -->
+                    <form method="post" action="#" id="internship-filter">
+                        <div class="row gtr-uniform">
+
+
+                            <div class="col-4 col-12-xsmall">
+                                <input type="text" name="search" id="search" placeholder="Search by Company name or Position" />
+                            </div>
+
+
+                            <div class="col-2 col-12-xsmall">
+                                <select name="status-filter" id="status-filter">
+                                    <option value="">All Statuses</option>
+                                    <option value="pending">Pending</option>
+                                    <option value="finalized">Finalized</option>
+                                    <option value="accepted">Accepted</option>
+                                    <option value="rejected">Rejected</option>
+                                </select>
+                            </div>
+
+                            <div class="col-2 col-12-xsmall">
+                                <select name="stage-filter" id="stage-filter">
+                                    <option value="">All Stages</option>
+                                    <option value="current">Current Intern</option>
+                                    <option value="completed">Internship Completed</option>
+                                </select>
+                            </div>
+
+                            <div class="col-2 col-12-xsmall">
+                                <select name="date-filter" id="date-filter">
+                                    <option value="">All Dates</option>
+                                    <option value="current">1-1-2025</option>
+                                    <option value="completed">1-3-2025</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </form>
+
+                    <!-- Internship List -->
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Company Name</th>
+                                    <th>Position</th>
+                                    <th>Duration</th>
+                                    <th>Status</th>
+                                    <th>Stage</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="internshipdone.html">Techcorp</a></td>
+                                    <td>Frontend Developer</td>
+                                    <td>Jun 2024 - Aug 2024</td>
+                                    <td><span class="status-badge status-accepted">Accepted</span></td>
+                                    <td><span class="stage-badge status-completed"> Internships Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Financeco</td>
+                                    <td>Data Analyst</td>
+                                    <td>Sep 2024 - Present</td>
+                                    <td><span class="status-badge status-accepted">Pending</span></td>
+                                    <td><span class="stage-badge status-completed">________</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Oscorp</td>
+                                    <td>Scientist</td>
+                                    <td>Apr 2025 - Aug 2025</td>
+                                    <td><span class="status-badge status-accepted">Accepted</span></td>
+                                    <td><span class="stage-badge status-completed">Current Intern</span></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script>
+
+            document.getElementById('internship-filter').addEventListener('submit', function (e) {
+                e.preventDefault();
+                const searchTerm = document.getElementById('search').value.toLowerCase();
+                const statusFilter = document.getElementById('status-filter').value;
+
+                document.querySelectorAll('tbody tr').forEach(row => {
+                    const company = row.cells[0].textContent.toLowerCase();
+                    const position = row.cells[1].textContent.toLowerCase();
+                    const status = row.cells[3].textContent.toLowerCase();
+
+                    const matchesSearch = company.includes(searchTerm) || position.includes(searchTerm);
+                    const matchesStatus = statusFilter === '' || status.includes(statusFilter);
+
+                    row.style.display = (matchesSearch && matchesStatus) ? '' : 'none';
+                });
+            });
+        </script>
+    </body>
+</html>
