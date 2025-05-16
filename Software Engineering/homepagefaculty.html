@@ -1,0 +1,438 @@
+<!DOCTYPE HTML>
+<!--
+	Faculty Academic - Internship Report Review
+-->
+<html>
+<head>
+	<title>Internship Report Review | Faculty Academic</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+	<style>
+		/* Main Styles */
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			background: #6a0dad; /* Purple background */
+			margin: 0;
+			color: #333;
+			line-height: 1.6;
+			min-height: 100vh;
+		}
+
+		/* Header Styles */
+		#header {
+			background: #2c3e50;
+			color: white;
+			padding: 1em 2em;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+		}
+
+			#header .title {
+				font-weight: 600;
+				font-size: 1.2em;
+				color: white;
+				text-decoration: none;
+			}
+
+			#header nav ul {
+				display: flex;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+
+				#header nav ul li {
+					margin-left: 1.5em;
+				}
+
+					#header nav ul li a {
+						color: white;
+						text-decoration: none;
+						transition: color 0.3s;
+					}
+
+						#header nav ul li a:hover {
+							color: #6a0dad;
+						}
+
+		/* Container Styles */
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 2em;
+			padding-top: 4em;
+		}
+
+		/* Report Card Styles */
+		.report-card {
+			background: #ffffff; /* White cards */
+			border-radius: 10px;
+			padding: 25px;
+			margin-bottom: 25px;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+			position: relative;
+		}
+
+		.report-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 15px;
+		}
+
+		.report-title {
+			font-size: 1.3rem;
+			color: #2c3e50;
+			margin: 0;
+		}
+
+		.report-meta {
+			color: #7f8c8d;
+			font-size: 0.9rem;
+		}
+
+		.report-status {
+			display: inline-block;
+			padding: 4px 12px;
+			border-radius: 20px;
+			font-size: 0.8rem;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+
+		.status-flagged {
+			background: #f39c12;
+			color: white;
+		}
+
+		.status-rejected {
+			background: #e74c3c;
+			color: white;
+		}
+
+		.status-accepted {
+			background: #27ae60;
+			color: white;
+		}
+
+		.report-content {
+			margin: 20px 0;
+			padding: 15px;
+			background: #f9f9f9;
+			border-radius: 6px;
+		}
+
+		/* Status Buttons */
+		.status-actions {
+			display: flex;
+			gap: 10px;
+			margin-top: 20px;
+			flex-wrap: wrap;
+		}
+
+		.status-btn {
+			padding: 10px 20px;
+			border-radius: 6px;
+			font-weight: 600;
+			cursor: pointer;
+			border: none;
+			transition: all 0.3s;
+		}
+
+			.status-btn:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+			}
+
+			.status-btn:active {
+				transform: translateY(0);
+			}
+
+		.flag-btn {
+			background: #f39c12;
+			color: white;
+		}
+
+		.reject-btn {
+			background: #e74c3c;
+			color: white;
+		}
+
+		.accept-btn {
+			background: #27ae60;
+			color: white;
+		}
+
+		/* Clarification Form Styles */
+		.clarification-form {
+			margin-top: 25px;
+			padding-top: 20px;
+			border-top: 1px solid #eee;
+		}
+
+		.form-group {
+			margin-bottom: 20px;
+		}
+
+			.form-group label {
+				display: block;
+				margin-bottom: 8px;
+				font-weight: 600;
+				color: #6a0dad;
+			}
+
+		.form-control {
+			width: 100%;
+			padding: 12px;
+			border: 1px solid #ddd;
+			border-radius: 6px;
+			font-size: 1rem;
+			transition: border 0.3s;
+		}
+
+			.form-control:focus {
+				outline: none;
+				border-color: #6a0dad;
+				box-shadow: 0 0 0 3px rgba(106, 13, 173, 0.1);
+			}
+
+		textarea.form-control {
+			min-height: 120px;
+			resize: vertical;
+		}
+
+		/* Button Styles */
+		.btn {
+			display: inline-block;
+			padding: 12px 24px;
+			border-radius: 6px;
+			font-weight: 600;
+			font-size: 1rem;
+			cursor: pointer;
+			transition: all 0.3s;
+			border: none;
+			text-align: center;
+		}
+
+		.btn-primary {
+			background: #6a0dad;
+			color: white;
+		}
+
+			.btn-primary:hover {
+				background: #5a0b9d;
+				transform: translateY(-2px);
+				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+			}
+
+		.btn-secondary {
+			background: #7f8c8d;
+			color: white;
+		}
+
+			.btn-secondary:hover {
+				background: #6d7b7d;
+			}
+
+		/* Comments Section */
+		.comments-section {
+			margin-top: 30px;
+		}
+
+		.comment {
+			padding: 15px;
+			background: #f5f5f5;
+			border-radius: 6px;
+			margin-bottom: 15px;
+			border-left: 3px solid #6a0dad;
+		}
+
+		.comment-header {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 10px;
+			font-size: 0.9rem;
+		}
+
+		.comment-author {
+			font-weight: 600;
+			color: #6a0dad;
+		}
+
+		.comment-date {
+			color: #7f8c8d;
+		}
+
+		/* Responsive Adjustments */
+		@media (max-width: 768px) {
+			#header {
+				flex-direction: column;
+				padding: 1em;
+			}
+
+				#header nav ul {
+					margin-top: 1em;
+				}
+
+					#header nav ul li {
+						margin-left: 1em;
+						margin-right: 1em;
+					}
+
+			.report-header {
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 10px;
+			}
+
+			.container {
+				padding: 1em;
+				padding-top: 6em;
+			}
+
+			.status-actions {
+				flex-direction: column;
+			}
+
+			.status-btn, .btn {
+				width: 100%;
+				margin-bottom: 10px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<!-- Header -->
+	<header id="header">
+		<a href="index.html" class="title">Faculty Academic</a>
+		<nav>
+			<ul>
+				<li><a href="homepagefaculty.html">Reports</a></li>
+				<li><a href="index.html">Home</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Main Content -->
+	<div class="container">
+		<!-- Report Card -->
+		<div class="report-card">
+			<div class="report-header">
+				<h2 class="report-title">Internship Final Report - John Doe</h2>
+				<div class="report-meta">
+					Submitted: 15 May 2023 |
+					<span class="report-status" id="currentStatus">Pending Review</span>
+				</div>
+			</div>
+
+			<div class="report-content">
+				<p>This is the student's final internship report. Please review the content and set the appropriate status.</p>
+			</div>
+
+			<!-- Status Action Buttons -->
+			<div class="status-actions">
+				<button class="status-btn flag-btn" onclick="setStatus('flagged')">
+					<i class="fas fa-flag"></i> Flag Report
+				</button>
+				<button class="status-btn reject-btn" onclick="setStatus('rejected')">
+					<i class="fas fa-times-circle"></i> Reject Report
+				</button>
+				<button class="status-btn accept-btn" onclick="setStatus('accepted')">
+					<i class="fas fa-check-circle"></i> Accept Report
+				</button>
+			</div>
+
+			<!-- Clarification Form (shown when rejected or flagged) -->
+			<div class="clarification-form" id="clarificationForm" style="display: none;">
+				<h3>Submit Clarification</h3>
+				<form id="commentForm">
+					<div class="form-group">
+						<label for="clarificationText">Clarification Details</label>
+						<textarea id="clarificationText" class="form-control" placeholder="Please provide details explaining why the report was flagged or rejected..." required></textarea>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary">Submit Clarification</button>
+						<button type="button" class="btn btn-secondary" onclick="document.getElementById('clarificationForm').style.display='none'">Cancel</button>
+					</div>
+				</form>
+			</div>
+
+			<!-- Existing Comments Section -->
+			<div class="comments-section" id="commentsSection">
+				<h3>Review Comments</h3>
+				<!-- Comments will be added dynamically -->
+			</div>
+		</div>
+	</div>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			// Handle comment form submission
+			document.getElementById('commentForm').addEventListener('submit', function (e) {
+				e.preventDefault();
+
+				const clarificationText = document.getElementById('clarificationText').value;
+				const currentStatus = document.getElementById('currentStatus').textContent;
+
+				if (clarificationText.trim() === '') {
+					alert('Please enter your clarification details');
+					return;
+				}
+
+				// Add new comment
+				addComment('Reviewer', clarificationText, currentStatus);
+
+				// Reset form
+				this.reset();
+				document.getElementById('clarificationForm').style.display = 'none';
+			});
+		});
+
+		function setStatus(status) {
+			const statusElement = document.getElementById('currentStatus');
+			const clarificationForm = document.getElementById('clarificationForm');
+
+			// Update status display
+			statusElement.textContent = status.charAt(0).toUpperCase() + status.slice(1);
+			statusElement.className = 'report-status status-' + status;
+
+			// Show clarification form for rejected or flagged status
+			if (status === 'rejected' || status === 'flagged') {
+				clarificationForm.style.display = 'block';
+			} else {
+				clarificationForm.style.display = 'none';
+				addComment('System', 'Report status changed to ' + status, status);
+			}
+
+			// Scroll to form if shown
+			if (clarificationForm.style.display === 'block') {
+				clarificationForm.scrollIntoView({ behavior: 'smooth' });
+			}
+		}
+
+		function addComment(author, text, status) {
+			const commentsSection = document.getElementById('commentsSection');
+			const commentDiv = document.createElement('div');
+			commentDiv.className = 'comment';
+
+			commentDiv.innerHTML = `
+					<div class="comment-header">
+						<span class="comment-author">${author}</span>
+						<span class="comment-date">${new Date().toLocaleDateString()} • ${status}</span>
+					</div>
+					<p>${text}</p>
+				`;
+
+			// Add to top of comments section
+			if (commentsSection.children.length > 1) {
+				commentsSection.insertBefore(commentDiv, commentsSection.children[1]);
+			} else {
+				commentsSection.appendChild(commentDiv);
+			}
+		}
+	</script>
+</body>
+</html>
