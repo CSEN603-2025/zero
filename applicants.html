@@ -90,6 +90,19 @@
 									</section>
 								</form>
 						</section>
+						<section>
+							<h2>Submit Clarification for Flagged/Rejected Report</h2>
+							<form id="clarification-form" method="post" action="#">
+								<label for="applicant-name">Applicant Name:</label>
+								<input type="text" id="applicant-name" name="applicant-name" required placeholder="Enter applicant's name">
+
+								<label for="clarification">Clarification:</label>
+								<textarea id="clarification" name="clarification" rows="4" required placeholder="Explain why the report was flagged or rejected"></textarea>
+
+								<button type="submit" class="button primary">Submit Clarification</button>
+							</form>
+							<div id="clarification-message" style="margin-top:10px;"></div>
+						</section>
 					</div>
 				</section>
 			</div>
