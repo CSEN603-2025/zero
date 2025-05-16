@@ -67,12 +67,16 @@
 		.fa-bell {
 			position: relative;
 			font-size: 1.2rem;
-			color: rgba(255, 255, 255, 0.8);
+			color: white;
 		}
 
 			.fa-bell:hover {
 				color: white;
 			}
+        .status-highlight {
+            color: #f44336;
+        }
+
 	</style>
 </head>
 <body class="is-preload">
@@ -95,7 +99,7 @@
 				<li><a href="availinternships.html">Internships</a></li>
 				<li><a href="internshipsapplied.html">My Internships</a></li>
 				<li>
-					<a href="inboxs.html" class="icon solid fa-bell"><span class="label">Inbox</span></a>
+					<a href="inboxs.html" class="icon solid fa-bell active"><span class="label">Inbox</span></a>
 				</li>
 				<li><a href="index.html">Home</a></li>
 			</ul>
@@ -112,8 +116,15 @@
 
 				<section class="features">
 					<h3>
-						&bull; SCAD office would like to announce the start date and end date of the new internship cycle. <br />
-						The start date is 20/06/2025 and the end date is 20/10/2025. We wish you best of luck in you internships!
+						Status Update: Your report has been <span class="status-highlight">flagged</span>.
+						<a href="reportcomments.html" class="button small primary" style="background-color: #7B2CBF; border-color: #7B2CBF; color: white !important;">View Comments</a>
+					</h3>
+				</section>
+
+				<section class="features">
+					<h3>
+						SCAD office would like to announce the start date and end date of the new internship cycle. <br />
+						The start date is <span class="status-highlight">20/06/2025</span> and the end date is <span class="status-highlight">20/10/2025</span>. We wish you luck in your internship journey!
 					</h3>
 				</section>
 
