@@ -1,190 +1,106 @@
 <!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-<head>
-    <title>Available Internships</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-</head>
-<body class="is-preload">
-
-    <!-- Header -->
-    <header id="header">
-        <nav>
-            <ul>
-                <li>
-                    <div class="profile-dropdown">
-                        <a href="profiles.html" class="profile-link">
-                            <img src="images/pic01.jpg" alt="My Profile" class="profile-icon" />
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="profiles.html" class="dropdown-item">View Profile</a>
-                            <a href="#" class="dropdown-item">Logout</a>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="availinternships.html"class="active">Internships</a></li>
-                <li><a href="internshipsapplied.html" > My Internships</a></li>
-                <li>
-                    <a href="inboxs.html" class="icon solid fa-bell"><span class="label">Inbox</span></a>
-                </li>
-                <li><a href="index.html">Home</a></li>
-            </ul>
-        </nav>
-    </header>
-    <style>
-        .status-badge {
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
-
-        .status-current {
-            background: #5ab9ff;
-            color: #1a1a2e;
-        }
-
-        .status-completed {
-            background: #00ff88;
-            color: #1a1a2e;
-        }
-    </style>
-
-    <body class="is-preload">
-
-        <!-- Wrapper -->
-        <div id="wrapper">
-
-            <!-- Main -->
-            <section id="main" class="wrapper">
-                <div class="inner">
-                    <h1 class="major">Available Internships</h1>
-
-                    <!-- Search and Filters -->
-                    <form method="post" action="#" id="internship-filter">
-                        <div class="row gtr-uniform">
-
-                            <div class="col-6 col-12-xsmall">
-                                <input type="text" name="search" id="search" placeholder="Search by Job title or Company name" />
-                            </div>
+	<head>
+		<title>My Profile</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
 
 
+<body class="is-preload profile-page">
 
-                            <div>
-                                <select name="ind-filter" id="ind-filter">
-                                    <option value="">All Industries</option>
-                                    <option value="op1">Technology</option>
-                                    <option value="op2">IT</option>
-                                    <option value="op3">Mangement</option>
-                                    <option value="op4">Business</option>
-                                    <option value="op5">Finance</option>
-                                    <option value="op6">Economics</option>
-                                </select>
-                            </div>
+		<!-- Header -->
+	<header id="header">
+		<a href="profiles.html" class="active"> My Profile </a>
+		
+		<nav>
+			<ul>
+				<li>
+					<div class="profile-dropdown">
+						<a href="profiles.html" class="profile-link">
+							<img src="images/pic01.jpg" alt="My Profile" class="profile-icon" />
+						</a>
+						<div class="dropdown-content">
+							<a href="profiles.html" class="dropdown-item">View Profile</a>
+							<a href="#" class="dropdown-item">Logout</a>
+						</div>
+					</div>
+				</li>
+				<li><a href="availinternships.html">Internships</a></li>
+				<li><a href="internshipsapplied.html">My Internships</a></li>
+				<li>
+					<a href="inboxs.html" class="icon solid fa-bell"><span class="label">Inbox</span></a>
+					<span class="notification-badge">2</span> <!-- Optional notification counter -->
+				</li>
+				<li><a href="index.html">Home</a></li>
+			</ul>
+		</nav>
+	</header>
 
-                            <div>
-                                <select name="dur-filter" id="dur-filter">
-                                    <option value="">All Durations</option>
-                                    <option value="op1"> < 1 Month </option>
-                                    <option value="op2">1-1.5 Months</option>
-                                    <option value="op3">1.5-2 Months</option>
-                                    <option value="op4">2-2.5 Months</option>
-                                    <option value="op5">2.5-3 Months</option>
-                                    <option value="op6">>3 Months</option>
-                                </select>
-                            </div>
+		<!-- Wrapper -->
+		<div id="wrapper">
 
-                            <div>
-                                <select name="dur-filter" id="dur-filter">
-                                    <option value="">All Payments</option>
-                                    <option value="op1"> Paid</option>
-                                    <option value="op2">Unpaid</option>
-                                </select>
-                            </div>
+			<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<!-- Profile Header -->
+					<div class="profile-header">
+						<img src="images/pic01.jpg" alt="Profile Picture" />
+						<div>
+							<h2>Nada Ahmed</h2>
+							<a href="edit.html" class="button small primary">Edit Profile</a>
+						</div>
+					</div>
 
+					<!-- Job Interests -->
+					<div class="profile-section">
+						<h4>Job Interests</h4>
+						<p>Technology, IT, Management, Business, and Finance</p>
+					</div>
 
-                        </div>
-                    </form>
+					<!-- Previous Internships -->
+					<div class="profile-section">
+						<h4>Previous Internships</h4>
+						<ul>
+							<li>Project Manager Assistant at PepsiCo</li>
+							<li>Junior Auditor at Heinz</li>
+						</ul>
+					</div>
 
+					<!-- Part-Time Jobs -->
+					<div class="profile-section">
+						<h4>Part-Time Jobs</h4>
+						<p>Project Manager Assistant for 2 Months at Johnson Controls</p>
+					</div>
 
+					<!-- College Activities -->
+					<div class="profile-section">
+						<h4>College Activities</h4>
+						<p>None</p>
+					</div>
 
-                    <!-- Internship List -->
-                    <div class="table-wrapper">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Company Name</th>
-                                    <th>Job Title</th>
-                                    <th>Industry</th>
-                                    <th>Duration</th>
-                                    <th>Payment</th>
-                                    <th>Recommendation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>TechCorp</td>
-                                    <td>Frontend Developer</td>
-                                    <td>Technology,IT</td>
-                                    <td>2 Months</td>
-                                    <th>Paid</th>
-                                    <th>Highly recommended</th>
-                                    <th>
-                                        <ul class="actions small">
-                                            <li><a href="internship1.html" class="button">Deatils</a></li>
-                                        </ul>
-                                    </th>
-                                </tr>
+					<!-- Major & Semester -->
+					<div class="profile-section">
+						<h4>Major and Semester</h4>
+						<p>Business Informatics (6th Semester)</p>
+					</div>
 
-                                <tr>
-                                    <td>FinanceCo</td>
-                                    <td>Data Analyst</td>
-                                    <td>Technology,Finance</td>
-                                    <td>4 Months</td>
-                                    <th>Unpaid</th>
-                                    <th>Highly recommended</th>
-                                    <th>
-                                        <ul class="actions small">
-                                            <li><a href="internship2.html" class="button">Deatils</a></li>
-                                        </ul>
-                                    </th>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
-        </div>
+					<!-- Contact Information -->
+					<div class="profile-section" style="color: black;">
+						<h4>Contact Information</h4>
+						<p>Email: nada.ahmed@gmail.com</p>
+						<p>Phone: 01111111111</p>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
 
-
-
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.scrollex.min.js"></script>
-        <script src="assets/js/jquery.scrolly.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
-        <script>
-
-            document.getElementById('internship-filter').addEventListener('submit', function (e) {
-                e.preventDefault();
-                const searchTerm = document.getElementById('search').value.toLowerCase();
-                const statusFilter = document.getElementById('status-filter').value;
-
-                document.querySelectorAll('tbody tr').forEach(row => {
-                    const company = row.cells[0].textContent.toLowerCase();
-                    const position = row.cells[1].textContent.toLowerCase();
-                    const status = row.cells[3].textContent.toLowerCase();
-
-                    const matchesSearch = company.includes(searchTerm) || position.includes(searchTerm);
-                    const matchesStatus = statusFilter === '' || status.includes(statusFilter);
-
-                    row.style.display = (matchesSearch && matchesStatus) ? '' : 'none';
-                });
-            });
-        </script>
-    </body>
 </html>
