@@ -1,0 +1,403 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Workshops</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <noscript><link href="assets/css/noscript.css" rel="stylesheet" /></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style id="force-styles">
+        /* Nuclear option - will definitely override everything */
+        #wrapper #main .inner .workshop-tabs {
+            margin-bottom: 5px !important;
+            padding-bottom: 10 !important;
+        }
+
+        #wrapper #main .inner .workshop-grid {
+            margin-top: 5px !important;
+        }
+    </style>
+
+</head>
+<body class="is-preload">
+    <header id="header">
+        <a href="#" class="button small primary">Create New Worshop</a>
+        <nav>
+            <ul>
+                <div class="profile-dropdown">
+                    <a href="profiles.html" class="profile-link">
+                        <img src="images/pic01.jpg" alt="My Profile" class="profile-icon" />
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#" class="dropdown-item">Logout</a>
+                    </div>
+                </div>
+                <li><a href="homepagescad.html" class="active">Current Cycle</a></li>
+                <li><a href="requests.html">Company Requests</a></li>
+                <li><a href="allcomp.html" >Companies</a></li>
+                <li><a href="allstud.html">Students</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="workshopsscad.html" class="active">Work Shops</a></li>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="wrapper">
+        <section class="wrapper" id="main">
+            <!-- Workshop Tabs -->
+            <div class="inner">
+                <div class="workshop-tabs">
+                    <button class="tab-btn active" onclick="filterWorkshops('all')">All Workshops</button>
+                    <button class="tab-btn" onclick="filterWorkshops('upcoming')">Upcoming</button>
+                    <button class="tab-btn" onclick="filterWorkshops('recorded')">Recorded</button>
+                </div>
+            </div>
+
+            <!-- Workshop Cards Grid -->
+            <div class="inner">
+                <div class="workshop-grid">
+                    <!-- Workshop 1 -->
+                    <div class="workshop-card upcoming" data-id="workshop1">
+                        <div class="workshop-header">
+                            <span class="workshop-badge live">Live</span>
+                            <h2>Building Your First CV</h2>
+                            <div class="workshop-meta">
+                                <span><i class="fas fa-calendar-alt"></i> June 5, 2025</span>
+                                <span><i class="fas fa-clock"></i> 3:00 PM - 4:30 PM</span>
+                            </div>
+                        </div>
+                        <div class="workshop-body">
+                            <p><strong>Speaker:</strong> Eng. Yasmine Elbehairy</p>
+                            <p>Tips for writing a standout CV in tech careers.</p>
+                            <div class="workshop-actions">
+                                <a href="#" class="button small primary">Read</a>
+                                <a href="workshop1scad" class="button small" onclick="registerWorkshop('workshop1')">Update</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Workshop 2 -->
+                    <div class="workshop-card upcoming" data-id="workshop2">
+                        <div class="workshop-header">
+                            <span class="workshop-badge live">Live</span>
+                            <h2>LinkedIn Optimization</h2>
+                            <div class="workshop-meta">
+                                <span><i class="fas fa-calendar-alt"></i> June 12, 2025</span>
+                                <span><i class="fas fa-clock"></i> 11:00 AM - 12:30 PM</span>
+                            </div>
+                        </div>
+                        <div class="workshop-body">
+                            <p><strong>Speaker:</strong> Mr. Kareem Hossam</p>
+                            <p>How to make the most of LinkedIn for job applications.</p>
+
+                            <div class="workshop-actions">
+                                <a href="#" class="button small primary">Read</a>
+                                <a href="workshop3scad" class="button small" onclick="registerWorkshop('workshop1')">Update</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Workshop 3 -->
+                    <div class="workshop-card recorded" data-id="workshop3">
+                        <div class="workshop-header">
+                            <span class="workshop-badge recorded">Recorded</span>
+                            <h2>Interview Strategies</h2>
+                            <div class="workshop-meta">
+                                <span><i class="fas fa-calendar-alt"></i> Recorded: May 18, 2025</span>
+                                <span><i class="fas fa-clock"></i> 45 min</span>
+                            </div>
+                        </div>
+                        <div class="workshop-body">
+                            <p><strong>Speaker:</strong> Dr. Laila El-Hamamsy</p>
+                            <p>Practice behavioral and technical interview questions.</p>
+                            <div class="workshop-actions">
+                                <a href="#" class="button small primary">Read</a>
+                                <a href="workshop3scad" class="button small" onclick="registerWorkshop('workshop1')">Update</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Workshop 4 -->
+                    <div class="workshop-card upcoming registered" data-id="workshop4">
+                        <div class="workshop-header">
+                            <span class="workshop-badge registered">Registered</span>
+                            <h2>Tech Skills for the Future</h2>
+                            <div class="workshop-meta">
+                                <span><i class="fas fa-calendar-alt"></i> June 26, 2025</span>
+                                <span><i class="fas fa-clock"></i> 2:00 PM - 3:30 PM</span>
+                            </div>
+                        </div>
+                        <div class="workshop-body">
+                            <p><strong>Speaker:</strong> Dr. Sarah Mahmoud</p>
+                            <p>Trending technologies in the 2030 job market.</p>
+                            <div class="workshop-actions">
+                                <a href="#" class="button small primary">Read</a>
+                                <a href="workshop4scad" class="button small" onclick="registerWorkshop('workshop1')">Update</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <style>
+        /* Base Styles */
+        body {
+            color: #333;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+        }
+
+        /* Workshop Center Styles */
+
+        #wrapper #main .inner {
+            padding-top: 20px !important;
+            padding-bottom: 4px !important;
+        }
+
+        .workshop-card:first-child {
+            margin-top: 0 !important;
+        }
+
+        .workshop-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px; /* Reduce from current 20px */
+            padding-bottom: 5px; /* Reduce from current 10px */
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .tab-btn {
+            padding: 8px 16px;
+            background: #887a8ad9;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: #555;
+            font-weight: 500;
+        }
+
+            .tab-btn.active {
+                background: #890dad;
+                color: #6a0dad;
+            }
+
+        .workshop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .workshop-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #e0e0e0;
+        }
+
+            .workshop-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+
+        .workshop-header {
+            padding: 15px;
+            background: #f9f9f9;
+            border-bottom: 1px solid #eee;
+            position: relative;
+        }
+
+            .workshop-header h2 {
+                color: #2c3e50;
+                margin: 0 0 10px 0;
+                font-size: 1.3rem;
+            }
+
+        .workshop-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+            .workshop-badge.live {
+                background: #e74c3c;
+                color: white;
+            }
+
+            .workshop-badge.recorded {
+                background: #7f8c8d;
+                color: white;
+            }
+
+            .workshop-badge.registered {
+                background: #27ae60;
+                color: white;
+            }
+
+        .workshop-body {
+            padding: 15px;
+        }
+
+            .workshop-body p {
+                color: #555;
+                margin: 8px 0;
+                line-height: 1.5;
+            }
+
+            .workshop-body strong {
+                color: #2c3e50;
+            }
+
+        .workshop-meta {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin: 8px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+            .workshop-meta i {
+                margin-right: 5px;
+                color: #6a0dad;
+            }
+
+        .workshop-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        /* Replace the existing button styles with this: */
+        .button {
+            display: inline-block;
+            padding: 2px 5px; /* Reduced padding for smaller size */
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.65rem; /* Smaller font size */
+            transition: all 0.2s;
+            font-weight: 600; /* Slightly bolder text */
+        }
+
+        a.button.primary {
+            color: white !important;
+        }
+
+        a.button:not(.primary):not(.success) {
+            color: #000 !important; /* Pure black */
+        }
+
+        .button.small {
+            padding: 3px 6px; /* Even smaller for small buttons */
+            font-size: 0.7rem;
+        }
+
+        .button.primary {
+            background: #890dad;
+            color: white; /* White text for primary buttons */
+            border: 1px solid #6a0dad;
+        }
+
+        .button.success {
+            background: #27ae60;
+            color: white; /* White text for success buttons */
+            border: 1px solid #27ae60;
+        }
+
+        .button:not(.primary):not(.success) {
+            background: #887a8ad9;
+            color: black; /* Purple text for secondary buttons */
+            border: 1px solid #6a0dad;
+        }
+
+
+
+        .notification-toggle {
+            font-size: 0.8rem;
+            margin-left: auto;
+            color: #7f8c8d;
+        }
+
+            .notification-toggle label {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                cursor: pointer;
+            }
+
+            .notification-toggle input {
+                margin: 0;
+            }
+    </style>
+
+    <script>
+        function filterWorkshops(type) {
+            const cards = document.querySelectorAll('.workshop-card');
+            const tabs = document.querySelectorAll('.tab-btn');
+
+            tabs.forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+
+            cards.forEach(card => {
+                if (type === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = card.classList.contains(type) ? 'block' : 'none';
+                }
+            });
+        }
+
+        function registerWorkshop(id) {
+            // Add registration logic here
+            const card = document.querySelector(`.workshop-card[data-id="${id}"]`);
+            card.classList.add('registered');
+            const badge = card.querySelector('.workshop-badge');
+            badge.className = 'workshop-badge registered';
+            badge.textContent = 'Registered';
+
+            // Show success message
+            const notification = document.createElement('div');
+            notification.style.position = 'fixed';
+            notification.style.bottom = '20px';
+            notification.style.right = '20px';
+            notification.style.backgroundColor = '#27ae60';
+            notification.style.color = 'white';
+            notification.style.padding = '10px 20px';
+            notification.style.borderRadius = '4px';
+            notification.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+            notification.style.zIndex = '1000';
+            notification.textContent = 'Successfully registered! You will receive reminders before the workshop.';
+
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                notification.style.transition = 'opacity 0.5s';
+                setTimeout(() => notification.remove(), 500);
+            }, 3000);
+        }
+
+        function playWorkshop(id) {
+            // Add playback logic here
+            window.location.href = `workshop_player.html?id=${id}`;
+        }
+    </script>
+</body>
+</html>
