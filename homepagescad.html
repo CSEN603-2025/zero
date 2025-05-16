@@ -106,5 +106,55 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+		<script>
+
+				const stats = {
+					accepted: 42,
+					rejected: 7,
+					flagged: 3,
+					reviewTime: 2.5, // days
+					topCourse: "Software Engineering",
+					topCompany: "Tech Innovators Inc.",
+					mostInterns: "Future Solutions Ltd."
+				};
+
+
+				document.getElementById('stat-accepted').textContent = stats.accepted;
+				document.getElementById('stat-rejected').textContent = stats.rejected;
+				document.getElementById('stat-flagged').textContent = stats.flagged;
+				document.getElementById('stat-review-time').textContent = stats.reviewTime + " days";
+				document.getElementById('stat-top-course').textContent = stats.topCourse;
+				document.getElementById('stat-top-company').textContent = stats.topCompany;
+				document.getElementById('stat-most-interns').textContent = stats.mostInterns;
+
+
+				document.getElementById('generate-report').addEventListener('click', function() {
+					const report = 
+	`Internship Cycle Statistics Report
+
+	Accepted Reports: ${stats.accepted}
+	Rejected Reports: ${stats.rejected}
+	Flagged Reports: ${stats.flagged}
+	Average Review Time: ${stats.reviewTime} days
+	Most Used Course: ${stats.topCourse}
+	Top Rated Company: ${stats.topCompany}
+	Top Company by Internship Count: ${stats.mostInterns}
+
+	Generated on: ${new Date().toLocaleString()}
+	`;
+
+					const blob = new Blob([report], {type: 'text/plain'});
+					const url = URL.createObjectURL(blob);
+					const link = document.getElementById('download-link');
+					link.href = url;
+					link.style.display = 'inline-block';
+					link.click();
+					setTimeout(() => {
+						URL.revokeObjectURL(url);
+						link.style.display = 'none';
+					}, 2000);
+				});
+			</script>
+
 	</body>
 </html>
