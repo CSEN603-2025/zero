@@ -16,58 +16,119 @@
 
 		<!-- Header -->
 		<header id="header">
-			<a href="index.html" class="title">Faculty Academic</a>
+			<!--<h1 href="index.html" class="major">My Posts</h1> -->
 			<nav>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="faculty.html" class="active">LOG IN</a></li>
-				</ul>
+                <ul>
+                    <li> <a href="post.html" class="button small primary">New Post</a></li>
+                    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+
+                    <li><a href="mycompany.html">My Company</a></li>
+                    <li><a href="myposts.html">My Posts</a></li>
+                    <li><a href="applicants.html">Applicants</a></li>
+                    <li><a href="interns.html" class="active">Interns</a></li>
+                    <li><a href="inboxc.html">Inbox</a></li>
+                </ul>
 			</nav>
 		</header>
 
-		<!-- Wrapper -->
-		<div id="wrapper">
+	<!-- Wrapper -->
+			<div id="wrapper">
 
-			<!-- Main -->
-			<section id="main" class="wrapper">
+				<!-- Main -->
+				<section id="main" class="wrapper">
+                    <div class="inner">
+                        <h1 href="currentinterns.html" class="major">Interns</h1>
+
+                        <div class="search-container">
+                            <input type="text" id="search-input" placeholder="Search by Name...">
+                            <button id="search-btn">
+                                <i class="fas fa-search"></i> <!-- Font Awesome icon (optional) -->
+                            </button>
+                        </div>
+                        <br />
+
+                        <div class="search-container">
+                            <input type="text" id="search-input" placeholder="Search by Job title...">
+                            <button id="search-btn">
+                                <i class="fas fa-search"></i> <!-- Font Awesome icon (optional) -->
+                            </button>
+                        </div>
+
+                        <br />
+
+                        <label> Filter by internship stage: </label>
+                        <select id="basic-filter" class="simple-filter">
+                            <option value="all">Show All</option>
+                            <option value="proman">Current Intern</option>
+                            <option value="dataanalist">Internship Complete</option>
+                        </select>
+
+
+                        <section>
+                            <form method="post" action="#">
+                                <section>
+                                    <br />
+                                    <br />
+                                    <span class="icon solid major fa-code"></span>
+                                    <h2>Nada Ahmed</h2>
+                                    <h3> Current Intern</h3>
+                                    <ul class="actions">
+                                        <li><a href="accepted.html" class="button">Details</a></li>
+                                    </ul>
+                                </section>
+
+                                <section>
+                                    <span class="icon solid major fa-code"></span>
+                                    <h2>Hadia Zaharan</h2>
+                                    <h3>Internship Complete</h3>
+                                    <ul class="actions">
+                                        <li><a href="internshipcomplete.html" class="button">Details</a></li>
+                                    </ul>
+                                </section>
+
+                                <section>
+                                    <span class="icon solid major fa-code"></span>
+                                    <h2>Roaa Mohamed</h2>
+                                    <h3>Internship Complete</h3>
+                                    <ul class="actions">
+                                        <li><a href="app3.html" class="button">Details</a></li>
+                                    </ul>
+                                </section>
+
+                                <section>
+                                    <span class="icon solid major fa-code"></span>
+                                    <h2>Mawada Ossama</h2>
+                                    <h3> Current Intern</h3>
+                                    <ul class="actions">
+                                        <li><a href="app4.html" class="button">Details</a></li>
+                                    </ul>
+                                </section>
+                            </form>
+                        </section>
+                    </div>
+				</section>
+			</div>
+
+
+			<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
 				<div class="inner">
-					<h1 class="major">Log Into Your Account</h1>
-						<section>
-							<form method="post" action="#">
-								<div class="field">
-									<div class="field half">
-										<label for="username">Username</label>
-										<input type="text" name="username" id="username" />
-										<br />
-									</div>
-
-									<div class="field">
-										<label for="password">Password</label>
-										<input type="password" name="password" id="password" />
-										<br />
-									</div>
-
-								</div>
-
-								<ul class="actions">
-									<li><a href="homepagefaculty" class="button submit">Log In</a></li>
-								</ul>
-							</form>
-						</section>
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li>
+					</ul>
 				</div>
-			</section>
-		</div>
+			</footer>
 
+			<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
-
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
