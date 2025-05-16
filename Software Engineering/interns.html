@@ -1,442 +1,73 @@
 <!DOCTYPE HTML>
 <!--
-    Hyperspace by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-<head>
-    <title>Interns</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-</head>
-<body class="is-preload">
+	<head>
+		<title>Faculty Academics' Log In</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
 
-    <!-- Header -->
-    <header id="header">
-        <!--<h1 href="index.html" class="major">My Posts</h1> -->
-        <nav>
-            <ul>
-                <li> <a href="post.html" class="button small primary">New Post</a></li>
-                &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-                &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="title">Faculty Academic</a>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="faculty.html" class="active">LOG IN</a></li>
+				</ul>
+			</nav>
+		</header>
 
-                <li><a href="mycompany.html">My Company</a></li>
-                <li><a href="myposts.html">My Posts</a></li>
-                <li><a href="applicants.html">Applicants</a></li>
-                <li><a href="interns.html" class="active">Interns</a></li>
-                <li><a href="inboxc.html">Inbox</a></li>
-            </ul>
-        </nav>
-    </header>
+		<!-- Wrapper -->
+		<div id="wrapper">
 
-    <!-- Wrapper -->
-    <div id="wrapper">
+			<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<h1 class="major">Log Into Your Account</h1>
+						<section>
+							<form method="post" action="#">
+								<div class="field">
+									<div class="field half">
+										<label for="username">Username</label>
+										<input type="text" name="username" id="username" />
+										<br />
+									</div>
 
-        <!-- Main -->
-        <section id="main" class="wrapper">
-            <div class="inner">
-                <h1 href="currentinterns.html" class="major">Interns</h1>
+									<div class="field">
+										<label for="password">Password</label>
+										<input type="password" name="password" id="password" />
+										<br />
+									</div>
 
-                <div class="search-container">
-                    <input type="text" id="search-input" placeholder="Search by Name...">
-                    <button id="search-btn">
-                        <i class="fas fa-search"></i> <!-- Font Awesome icon (optional) -->
-                    </button>
-                </div>
-                <br />
+								</div>
 
-                <div class="search-container">
-                    <input type="text" id="search-input" placeholder="Search by Job title...">
-                    <button id="search-btn">
-                        <i class="fas fa-search"></i> <!-- Font Awesome icon (optional) -->
-                    </button>
-                </div>
-
-                <br />
-
-                <label> Filter by internship stage: </label>
-                <select id="basic-filter" class="simple-filter">
-                    <option value="all">Show All</option>
-                    <option value="proman">Current Intern</option>
-                    <option value="dataanalist">Internship Complete</option>
-                </select>
-
-                <br />
-                <section id="internship-video-info" style="margin-top:2em; margin-bottom:2em;">
-                    <h2>What Internships Count Towards Your Requirement?</h2>
-                    <label for="major-select"><strong>Select Your Major:</strong></label>
-                    <select id="major-select" style="margin-left:1em;">
-                        <option value="">-- Choose Major --</option>
-                        <option value="software">Software Engineering</option>
-                        <option value="business">Business Informatics</option>
-                        <option value="law">Civil Law</option>
-                        <option value="finance">Finance</option>
-
-                    </select>
-                    <div id="video-info" style="margin-top:1em;">
-
-                    </div>
-                </section>
+								<ul class="actions">
+									<li><a href="homepagefaculty" class="button submit">Log In</a></li>
+								</ul>
+							</form>
+						</section>
+				</div>
+			</section>
+		</div>
 
 
-                <section>
-                    <form method="post" action="#">
-                        <section>
-                            <br />
-                            <br />
-                            <span class="icon solid major fa-code"></span>
-                            <h1>
-                                <span class="image left"><img src="images/pic01.jpg" alt="" /></span>
-                                <br /> <br />Nada Ahmed <span style="color: gold; font-weight: bold;">PRO</span>
-                            </h1>
-                            <h3> Current Intern</h3>
-                            <ul class="actions">
-                                <li><a href="accepted.html" class="button">Details</a></li>
-                            </ul>
-                        </section>
 
-                        <section>
-                            <span class="icon solid major fa-code"></span>
-                            <h2>Hadia Zaharan</h2>
-                            <h3>Internship Complete</h3>
-                            <ul class="actions">
-                                <li><a href="internshipcomplete.html" class="button">Details</a></li>
-                            </ul>
-                        </section>
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
-                        <section>
-                            <span class="icon solid major fa-code"></span>
-                            <h2>Roaa Mohamed</h2>
-                            <h3>Internship Complete</h3>
-                            <ul class="actions">
-                                <li><a href="app3.html" class="button">Details</a></li>
-                            </ul>
-                        </section>
-
-                        <section>
-                            <span class="icon solid major fa-code"></span>
-                            <h2>Mawada Ossama</h2>
-                            <h3> Current Intern</h3>
-                            <ul class="actions">
-                                <li><a href="app4.html" class="button">Details</a></li>
-                            </ul>
-                        </section>
-
-
-                        <section>
-                            <span class="icon solid major fa-code"></span>
-                            <h2>Ahmed Amr <span style="color: gold; font-weight: bold;">PRO</span></h2>
-                            <h3>Internship Complete</h3>
-                            <ul class="actions">
-                                <li><a href="app5.html" class="button">Details</a></li>
-                            </ul>
-                            <!-- Appointment Request for PRO students -->
-                            <form id="appointment-form-ahmed" style="margin-top: 1em;">
-                                <label for="appointment-reason-ahmed"><strong>Request Appointment for Video Call:</strong></label>
-                                <select id="appointment-reason-ahmed" required>
-                                    <option value="">-- Select Reason --</option>
-                                    <option value="career">Career Guidance</option>
-                                    <option value="clarification">Report Clarification</option>
-                                </select>
-                                <button type="submit" class="button small primary">Request Appointment</button>
-                            </form>
-                            <div id="appointment-status-ahmed" style="margin-top: 0.5em; color: green;"></div>
-                            <button id="video-call-btn-ahmed" class="button small" style="margin-top: 0.5em;" disabled>Start Video Call</button>
-                        </section>
-
-                        <!-- SCAD Office Appointment Request Section -->
-                        <section>
-                            <span class="icon solid major fa-user-tie"></span>
-                            <h2>SCAD Office</h2>
-                            <h3>Request Appointment with Student for Report Clarification</h3>
-                            <form id="appointment-form-scad" style="margin-top: 1em;">
-                                <label for="appointment-student-scad"><strong>Select Student:</strong></label>
-                                <select id="appointment-student-scad" required>
-                                    <option value="">-- Select Student --</option>
-                                    <option value="Ahmed Amr">Ahmed Amr</option>
-                                    <option value="Nada Ahmed">Nada Ahmed</option>
-
-                                </select>
-                                <button type="submit" class="button small primary">Request Appointment</button>
-                            </form>
-                            <div id="appointment-status-scad" style="margin-top: 0.5em; color: green;"></div>
-                            <div id="scad-accept-reject" style="margin-top: 1em; display:none;">
-                                <button id="accept-appointment-scad" class="button small primary">Accept</button>
-                                <button id="reject-appointment-scad" class="button small">Reject</button>
-                            </div>
-                        </section>
-
-
-                        <div id="notification-area" style="position:fixed;top:10px;right:10px;z-index:1000;"></div>
-
-                    </form>
-                </section>
-            </div>
-        </section>
-    </div>
-
-
-    <!-- Footer -->
-    <footer id="footer" class="wrapper alt">
-        <div class="inner">
-            <ul class="menu">
-                <li>&copy; Untitled. All rights reserved.</li>
-            </ul>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-
-    // Student (Ahmed Amr) requests appointment
-    document.getElementById('appointment-form-ahmed').addEventListener('submit', function(e) {
-    e.preventDefault();
-    document.getElementById('appointment-status-ahmed').textContent = "Appointment requested! Waiting for SCAD Office to accept.";
-    document.getElementById('video-call-btn-ahmed').disabled = true;
-    // Show accept/reject for SCAD Office
-    document.getElementById('scad-accept-reject').style.display = 'block';
-    showNotification("Ahmed Amr requested an appointment. SCAD Office can accept or reject.");
-    });
-
-    // SCAD Office requests appointment with student
-    document.getElementById('appointment-form-scad').addEventListener('submit', function(e) {
-    e.preventDefault();
-    var student = document.getElementById('appointment-student-scad').value;
-    if(student) {
-    document.getElementById('appointment-status-scad').textContent = "Appointment requested with " + student + ". Waiting for student to accept.";
-    // Show accept/reject for student (simulate)
-    setTimeout(function() {
-    showNotification("SCAD Office requested an appointment with " + student + ". Student can accept or reject.");
-    // Simulate student accept/reject UI (for demo, show accept/reject for SCAD too)
-    document.getElementById('scad-accept-reject').style.display = 'block';
-    }, 1000);
-    }
-    });
-
-    // SCAD Office accepts/rejects student's appointment request
-    document.getElementById('accept-appointment-scad').addEventListener('click', function() {
-    document.getElementById('appointment-status-ahmed').textContent = "Appointment accepted by SCAD Office! You can now start a video call.";
-    document.getElementById('video-call-btn-ahmed').disabled = false;
-    document.getElementById('scad-accept-reject').style.display = 'none';
-    showNotification("Your appointment was accepted by SCAD Office.");
-    });
-    document.getElementById('reject-appointment-scad').addEventListener('click', function() {
-    document.getElementById('appointment-status-ahmed').textContent = "Appointment rejected by SCAD Office.";
-    document.getElementById('video-call-btn-ahmed').disabled = true;
-    document.getElementById('scad-accept-reject').style.display = 'none';
-    showNotification("Your appointment was rejected by SCAD Office.");
-    });
-
-    // Simulate video call action
-    document.getElementById('video-call-btn-ahmed').addEventListener('click', function() {
-    alert("Starting video call with SCAD Office...");
-    });
-
-    // Notification function
-    function showNotification(message) {
-    var area = document.getElementById('notification-area');
-    var note = document.createElement('div');
-    note.style.background = '#222';
-    note.style.color = '#fff';
-    note.style.padding = '10px 20px';
-    note.style.marginBottom = '10px';
-    note.style.borderRadius = '5px';
-    note.style.boxShadow = '0 2px 8px rgba(0,0,0,0.15)';
-    note.textContent = message;
-    area.appendChild(note);
-    setTimeout(function() {
-    area.removeChild(note);
-    }, 4000);
-    }
-    </script>
-
-
-    <section id="video-call-section" style="display:none; margin-top:2em; border:1px solid #ccc; padding:1em; border-radius:8px;">
-        <h2>Video Call with <span id="call-with"></span></h2>
-        <div>
-            <span id="user-status" style="color:green;">Online</span> |
-            <span id="other-status" style="color:green;">Other: Online</span>
-        </div>
-        <div style="margin:1em 0;">
-            <button id="toggle-video" class="button small">Disable Video</button>
-            <button id="toggle-audio" class="button small">Mute</button>
-            <button id="share-screen" class="button small">Share Screen</button>
-            <button id="leave-call" class="button small" style="background:#e74c3c;color:#fff;">Leave Call</button>
-        </div>
-        <div id="screen-share-status" style="margin-bottom:1em; color:blue;"></div>
-        <div id="call-notifications" style="color:#e67e22;"></div>
-    </section>
-
-    <!-- Incoming Call Modal -->
-    <div id="incoming-call-modal" style="display:none; position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.5);z-index:2000;align-items:center;justify-content:center;">
-        <div style="background:#fff;padding:2em;border-radius:8px;max-width:350px;margin:auto;text-align:center;">
-            <h3>Incoming Call from <span id="incoming-caller"></span></h3>
-            <button id="accept-call" class="button small primary">Accept</button>
-            <button id="reject-call" class="button small">Reject</button>
-        </div>
-    </div>
-
-    <script>
-
-        let userOnline = true;
-        let otherOnline = true;
-
-
-        let inCall = false;
-        let videoEnabled = true;
-        let audioEnabled = true;
-        let screenSharing = false;
-        let currentCaller = "";
-        let currentCallee = "";
-
-
-        function updateOnlineStatus() {
-            document.getElementById('user-status').textContent = userOnline ? "Online" : "Offline";
-            document.getElementById('user-status').style.color = userOnline ? "green" : "red";
-            document.getElementById('other-status').textContent = "Other: " + (otherOnline ? "Online" : "Offline");
-            document.getElementById('other-status').style.color = otherOnline ? "green" : "red";
-        }
-
-        function simulateIncomingCall(from) {
-            document.getElementById('incoming-caller').textContent = from;
-            document.getElementById('incoming-call-modal').style.display = 'flex';
-        }
-
-
-        document.getElementById('accept-call').onclick = function () {
-            document.getElementById('incoming-call-modal').style.display = 'none';
-            startCall(currentCaller, currentCallee);
-            showCallNotification("Call accepted.");
-        };
-        document.getElementById('reject-call').onclick = function () {
-            document.getElementById('incoming-call-modal').style.display = 'none';
-            showNotification("Call rejected.");
-            inCall = false;
-        };
-
-        function startCall(user, other) {
-            inCall = true;
-            document.getElementById('video-call-section').style.display = '';
-            document.getElementById('call-with').textContent = other;
-            updateOnlineStatus();
-            showCallNotification("Call started with " + other + ".");
-        }
-
-        function endCall(leaver) {
-            inCall = false;
-            document.getElementById('video-call-section').style.display = 'none';
-            showNotification(leaver + " left the call.");
-            showCallNotification("Call ended.");
-        }
-
-
-        function showCallNotification(msg) {
-            document.getElementById('call-notifications').textContent = msg;
-            setTimeout(() => {
-                document.getElementById('call-notifications').textContent = "";
-            }, 4000);
-        }
-
-        // Toggle video
-        document.getElementById('toggle-video').onclick = function () {
-            videoEnabled = !videoEnabled;
-            this.textContent = videoEnabled ? "Disable Video" : "Enable Video";
-            showCallNotification(videoEnabled ? "Video enabled." : "Video disabled.");
-        };
-
-        // Toggle audio
-        document.getElementById('toggle-audio').onclick = function () {
-            audioEnabled = !audioEnabled;
-            this.textContent = audioEnabled ? "Mute" : "Unmute";
-            showCallNotification(audioEnabled ? "Audio unmuted." : "Audio muted.");
-        };
-
-        document.getElementById('share-screen').onclick = function () {
-            screenSharing = !screenSharing;
-            document.getElementById('screen-share-status').textContent = screenSharing ? "You are sharing your screen." : "";
-            showCallNotification(screenSharing ? "Screen sharing started." : "Screen sharing stopped.");
-        };
-
-        document.getElementById('leave-call').onclick = function () {
-            endCall("You");
-            setTimeout(() => {
-                showNotification("The other caller has been notified you left the call.");
-            }, 500);
-        };
-
-        function otherLeavesCall() {
-            if (inCall) {
-                endCall("Other user");
-                showNotification("The other caller has left the call.");
-            }
-        }
-
-        document.getElementById('video-call-btn-ahmed').onclick = function () {
-            currentCaller = "Ahmed Amr";
-            currentCallee = "SCAD Office";
-            simulateIncomingCall(currentCaller);
-        };
-
-        function showNotification(message) {
-            var area = document.getElementById('notification-area');
-            var note = document.createElement('div');
-            note.style.background = '#222';
-            note.style.color = '#fff';
-            note.style.padding = '10px 20px';
-            note.style.marginBottom = '10px';
-            note.style.borderRadius = '5px';
-            note.style.boxShadow = '0 2px 8px rgba(0,0,0,0.15)';
-            note.textContent = message;
-            area.appendChild(note);
-            setTimeout(function () {
-                area.removeChild(note);
-            }, 4000);
-        }
-
-        updateOnlineStatus();
-
-        const majorVideos = {
-            software: {
-                url: "https://www.youtube.com/embed/8cmx7V4oIr8", // Example video
-                desc: "Internships in software development, QA, DevOps, and IT support count towards your Software Engineering requirement."
-            },
-            business: {
-                url: "https://www.youtube.com/embed/1w8Z0UOXVaY", // Example video
-                desc: "Internships in business analysis, project management, and consulting count towards your Business Informatics requirement."
-            },
-            law: {
-                url: "https://www.youtube.com/embed/6v2L2UGZJAM", // Example video
-                desc: "Internships in legal offices, courts, and law firms count towards your Civil Law requirement."
-            },
-            finance: {
-                url: "https://www.youtube.com/embed/2Xc9gXyf2G4", // Example video
-                desc: "Internships in banks, investment firms, and accounting offices count towards your Finance requirement."
-            }
-        };
-
-        document.getElementById('major-select').addEventListener('change', function () {
-            const major = this.value;
-            const infoDiv = document.getElementById('video-info');
-            if (majorVideos[major]) {
-                infoDiv.innerHTML = `
-                            <iframe width="360" height="215" src="${majorVideos[major].url}" frameborder="0" allowfullscreen></iframe>
-                            <p style="margin-top:1em;">${majorVideos[major].desc}</p>
-                        `;
-            } else {
-                infoDiv.innerHTML = "";
-            }
-        });
-    </script>
-
-</body>
+	</body>
 </html>
