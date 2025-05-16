@@ -1,153 +1,275 @@
 <!DOCTYPE HTML>
 <!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Hyperspace by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Companies' Requests</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+    <title>Companies' Requests</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        /* Enhanced Styles */
+        .search-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            max-width: 600px;
+        }
 
-		<!-- Header -->
-			<header id="header">
-				<a href="index.html" class="title">SCAD Office Member</a>
-				<nav>
-					<ul>
-						<li><a href="homepagescad.html">Homepage</a></li>
-						<li><a href="requests.html" class="active">Company Requests</a></li>
-						<li><a href="allcomp.html">Companies</a></li>
-						<li><a href="allstud.html">Students</a></li>
-						<li><a href="reports.html">Reports</a></li>
+        #search-input {
+            flex-grow: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
 
-					</ul>
-				</nav>
-			</header>
+            #search-input:focus {
+                outline: none;
+                border-color: #6a0dad;
+                box-shadow: 0 0 0 2px rgba(106, 13, 173, 0.2);
+            }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+        #search-btn {
+            background: #6a0dad;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 0 20px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
 
-				<!-- Main -->
-				<section id="main" class="wrapper">
-                    <div class="inner">
-                        <h1 href="requests.html" class="major">Company Requests</h1>
-                        <div class="search-container">
-                            <input type="text" id="search-input" placeholder="Search companies by name...">
-                            <button id="search-btn">
-                                <i class="fas fa-search"></i> <!-- Font Awesome icon (optional) -->
-                            </button>
-                            <br />
-                        </div>
+            #search-btn:hover {
+                background: #5a0b9d;
+            }
 
-                        <br />
+        .simple-filter {
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            background: white;
+            color: #333;
+            cursor: pointer;
+        }
 
-                        <label> Filter By Industry: </label>
-                        <select id="basic-filter" class="simple-filter">
-                            <option value="all">Show All</option>
-                            <option value="architecture">Archticture</option>
-                            <option value="technology">Technology</option>
-                            <option value="finance">Finance</option>
-                            <option value="law">Law</option>
-                            <option value="realestate">Real Estate Development</option>
-                            <option value="manu">Manufacturing</option>
-                            <option value="ads">Advertising Services</option>
-                        </select>
+        .company-request {
+            background: white;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-left: 4px solid #6a0dad;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
 
-                        <br />
+            .company-request:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
 
-                        <div>
-                            <section>
-                                <form method="post" action="#">
-                                    <section>
-                                        <br />
-                                        <h3>&bull; Johnson Controls</h3>
-                                        <ul class="actions">
-                                            <li><a href="comp1.html" class="button">Details</a></li>
-                                        </ul>
-                                        <ul class="actions">
-                                            <li><a href="" class="button primary">Accept</a></li>
-                                            <li><a href="" class="button primary">Reject</a></li>
-                                        </ul>
-                                    </section>
+            .company-request h3 {
+                margin-top: 0;
+                color: #2c3e50;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
 
-                                    <section>
-                                        <br />
-                                        <h3>&bull; Waffarha</h3>
-                                        <ul class="actions">
-                                            <li><a href="comp2.html" class="button">Details</a></li>
-                                        </ul>
-                                        <ul class="actions">
-                                            <li><a href="" class="button primary">Accept</a></li>
-                                            <li><a href="" class="button primary">Reject</a></li>
-                                        </ul>
-                                    </section>
+                .company-request h3:before {
+                    color: #6a0dad;
+                    font-size: 24px;
+                }
 
-                                    <section>
-                                        <br />
-                                        <h3>&bull; Friday</h3>
-                                        <ul class="actions">
-                                            <li><a href="comp3.html" class="button">Details</a></li>
-                                        </ul>
-                                        <ul class="actions">
-                                            <li><a href="" class="button primary">Accept</a></li>
-                                            <li><a href="" class="button primary">Reject</a></li>
-                                        </ul>
-                                    </section>
+        .request-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
 
-                                    <section>
-                                        <br />
-                                        <h3>&bull; Pepsi Cola</h3>
-                                        <ul class="actions">
-                                            <li><a href="comp4.html" class="button">Details</a></li>
-                                        </ul>
-                                        <ul class="actions">
-                                            <li><a href="" class="button primary">Accept</a></li>
-                                            <li><a href="" class="button primary">Reject</a></li>
-                                        </ul>
-                                    </section>
+            .request-actions .button {
+                min-width: 100px;
+                text-align: center;
+                color: #fff !important; /* Ensure text is visible */
+            }
 
-                                    <section>
-                                        <br />
-                                        <h3>&bull; Orascom</h3>
-                                        <ul class="actions">
-                                            <li><a href="comp5.html" class="button">Details</a></li>
-                                        </ul>
-                                        <ul class="actions">
-                                            <li><a href="" class="button primary">Accept</a></li>
-                                            <li><a href="" class="button primary">Reject</a></li>
-                                        </ul>
-                                    </section>
+                .request-actions .button.primary {
+                    background: #6a0dad;
+                    color: white !important;
+                }
 
-                                    <section>
-                                        <br />
-                                        <h3>&bull; Juhayna</h3>
-                                        <ul class="actions">
-                                            <li><a href="comp6.html" class="button">Details</a></li>
-                                        </ul>
-                                        <ul class="actions">
-                                            <li><a href="" class="button primary">Accept</a></li>
-                                            <li><a href="" class="button primary">Reject</a></li>
-                                        </ul>
-                                    </section>
-                                </form>
-                            </section>
-                        </div>
+                .request-actions .button:not(.primary) {
+                    background: #444;
+                    color: white !important;
+                }
+
+                .request-actions .button.primary:hover {
+                    background: #5a0b9d;
+                }
+
+                .request-actions .button:hover {
+                    background: #333;
+                }
+
+        /* Make sure all button text is visible */
+        .button {
+            color: white !important;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .search-container {
+                flex-direction: column;
+            }
+
+            #search-btn {
+                padding: 12px;
+            }
+
+            .request-actions {
+                flex-direction: column;
+            }
+
+                .request-actions .button {
+                    width: 100%;
+                }
+        }
+    </style>
+</head>
+<body class="is-preload">
+
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <ul>
+                <div class="profile-dropdown">
+                    <a href="profiles.html" class="profile-link">
+                        <img src="images/pic01.jpg" alt="My Profile" class="profile-icon" />
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#" class="dropdown-item">Logout</a>
                     </div>
-				</section>
+                </div>
+                <li><a href="homepagescad.html">Homepage</a></li>
+                <li><a href="requests.html" class="active">Company Requests</a></li>
+                <li><a href="allcomp.html">Companies</a></li>
+                <li><a href="allstud.html">Students</a></li>
+                <li><a href="reports.html">Reports</a></li>
+            </ul>
+        </nav>
+    </header>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-	</body>
+        <!-- Main -->
+        <section id="main" class="wrapper">
+            <div class="inner">
+                <h1 href="requests.html" class="major">Company Requests</h1>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search companies by name...">
+                    <button id="search-btn">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                    <br />
+                </div>
+
+                <br />
+
+                <label> Filter By Industry: </label>
+                <select id="basic-filter" class="simple-filter">
+                    <option value="all">Show All</option>
+                    <option value="architecture">Archticture</option>
+                    <option value="technology">Technology</option>
+                    <option value="finance">Finance</option>
+                    <option value="law">Law</option>
+                    <option value="realestate">Real Estate Development</option>
+                    <option value="manu">Manufacturing</option>
+                    <option value="ads">Advertising Services</option>
+                </select>
+
+                <br />
+
+                <div class="company-requests-list">
+                    <section>
+                        <form method="post" action="#">
+                            <div class="company-request">
+                                <h3>Johnson Controls</h3>
+                                <div class="request-actions">
+                                    <a href="comp1.html" class="button">Details</a>
+                                    <a href="" class="button primary">Accept</a>
+                                    <a href="" class="button primary">Reject</a>
+                                </div>
+                            </div>
+
+                            <div class="company-request">
+                                <h3>Waffarha</h3>
+                                <div class="request-actions">
+                                    <a href="comp2.html" class="button">Details</a>
+                                    <a href="" class="button primary">Accept</a>
+                                    <a href="" class="button primary">Reject</a>
+                                </div>
+                            </div>
+
+                            <div class="company-request">
+                                <h3>Friday</h3>
+                                <div class="request-actions">
+                                    <a href="comp3.html" class="button">Details</a>
+                                    <a href="" class="button primary">Accept</a>
+                                    <a href="" class="button primary">Reject</a>
+                                </div>
+                            </div>
+
+                            <div class="company-request">
+                                <h3>Pepsi Cola</h3>
+                                <div class="request-actions">
+                                    <a href="comp4.html" class="button">Details</a>
+                                    <a href="" class="button primary">Accept</a>
+                                    <a href="" class="button primary">Reject</a>
+                                </div>
+                            </div>
+
+                            <div class="company-request">
+                                <h3>Orascom</h3>
+                                <div class="request-actions">
+                                    <a href="comp5.html" class="button">Details</a>
+                                    <a href="" class="button primary">Accept</a>
+                                    <a href="" class="button primary">Reject</a>
+                                </div>
+                            </div>
+
+                            <div class="company-request">
+                                <h3>Juhayna</h3>
+                                <div class="request-actions">
+                                    <a href="comp6.html" class="button">Details</a>
+                                    <a href="" class="button primary">Accept</a>
+                                    <a href="" class="button primary">Reject</a>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+</body>
 </html>
