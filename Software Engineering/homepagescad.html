@@ -5,81 +5,266 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Homepage</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+	<title>Homepage</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<style>
+		/* Enhanced Statistics Styles */
+		#statistics {
+			background: white;
+			border-radius: 8px;
+			padding: 5px;
+			box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+			margin-top: 0.5em; /* Reduced from 2em */
+		}
 
-		<!-- Header -->
-			<header id="header">
-				<a href="index.html" class="title">Homepage </a>
-				<nav>
-					<ul>
-						<li> <a href="set.html" class="button small primary">Set Internship Cycle Date</a></li>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="homepagescad.html" class="active">Homepage</a></li>
-					</ul>
-				</nav>
-			</header>
+			#statistics h2 {
+				color: #6a0dad;
+				margin-bottom: 20px;
+				padding-bottom: 10px;
+				border-bottom: 2px solid #f0e6ff;
+			}
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+			#statistics ul {
+				list-style-type: none;
+				padding: 0;
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 15px;
+			}
 
-				<!-- Main -->
-				<section id="main" class="wrapper">
+			#statistics li {
+				padding: 12px 15px;
+				background: #f9f5ff;
+				border-radius: 6px;
+				font-size: 16px;
+			}
+
+				#statistics li strong {
+					color: #6a0dad;
+					display: inline-block;
+					min-width: 220px;
+				}
+
+			#statistics span {
+				font-weight: bold;
+				color: #333;
+			}
+
+		#generate-report {
+			background: #6a0dad;
+			color: white !important; /* Force white text */
+			border: none;
+			padding: 6px 12px;
+			border-radius: 6px;
+			font-size: 14px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+		}
+
+			#generate-report:hover {
+				background: #5a0b9d;
+				transform: translateY(-2px);
+			}
+
+			#generate-report i {
+				font-size: 18px;
+				color: white !important; /* Ensure icon is white */
+			}
+
+		/* Profile dropdown styles */
+		.profile-dropdown {
+			position: relative;
+			display: inline-block;
+		}
+
+		.profile-icon {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			object-fit: cover;
+			border: 2px solid #6a0dad;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			right: 0;
+			background-color: white;
+			min-width: 120px;
+			box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+			z-index: 1;
+			border-radius: 6px;
+			overflow: hidden;
+		}
+
+		.dropdown-item {
+			color: #333;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+			transition: background-color 0.3s;
+		}
+
+			.dropdown-item:hover {
+				background-color: #f0e6ff;
+				color: #6a0dad;
+			}
+
+		.profile-dropdown:hover .dropdown-content {
+			display: block;
+		}
+
+		/* Ensure all elements are visible */
+		#statistics,
+		#statistics li,
+		#statistics span,
+		.button,
+		.profile-icon {
+			opacity: 1 !important;
+			visibility: visible !important;
+		}
+
+		/* Responsive adjustments */
+		@media (max-width: 768px) {
+			#statistics ul {
+				grid-template-columns: 1fr;
+			}
+		}
+	</style>
+</head>
+<body class="is-preload">
+
+	<!-- Header -->
+	<header id="header">
+		<a href="set.html" class="button small primary">Set Internship Cycle Date</a>
+		<nav>
+			<ul>
+				<div class="profile-dropdown">
+					<a href="profiles.html" class="profile-link">
+						<img src="images/pic01.jpg" alt="My Profile" class="profile-icon" />
+					</a>
+					<div class="dropdown-content">
+						<a href="#" class="dropdown-item">Logout</a>
+					</div>
+				</div>
+				<li><a href="homepagescad.html" class="active">Current Cycle</a></li>
+				<li><a href="requests.html">Company Requests</a></li>
+				<li><a href="allcomp.html" class="active">Companies</a></li>
+				<li><a href="allstud.html">Students</a></li>
+				<li><a href="reports.html">Reports</a></li>
+				<li><a href="index.html">Home</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<section id="main" class="wrapper">
+			<div class="inner">
+
+				<!-- Statistics -->
+				<section id="statistics" class="wrapper">
 					<div class="inner">
-						<div class="features">
-							<section>
-								<span class="icon solid major fa-code"></span>
-								<h3>Company Requests</h3>
-								<ul class="actions">
-									<li><a href="requests.html" class="button">View</a></li>
-								</ul>
-							</section>
-
-							<section>
-								<span class="icon solid major fa-code"></span>
-								<h3>All Companies</h3>
-								<ul class="actions">
-									<li><a href="allcomp.html" class="button">View</a></li>
-								</ul>
-							</section>
-
-							<section>
-								<span class="icon solid major fa-code"></span>
-								<h3>All Students</h3>
-								<ul class="actions">
-									<li><a href="allstud.html" class="button">View</a></li>
-								</ul>
-							</section>
-
-							<section>
-								<span class="icon solid major fa-code"></span>
-								<h3>All Reports Submitted</h3>
-								<ul class="actions">
-									<li><a href="reports.html" class="button">View</a></li>
-								</ul>
-							</section>
-
-						</div>
+						<h2>Current Internship Cycle Statistics</h2>
+						<ul>
+							<li><strong>Accepted Reports:</strong> <span id="stat-accepted">0</span></li>
+							<li><strong>Rejected Reports:</strong> <span id="stat-rejected">0</span></li>
+							<li><strong>Flagged Reports:</strong> <span id="stat-flagged">0</span></li>
+							<li><strong>Average Review Time:</strong> <span id="stat-review-time">0 days</span></li>
+							<li><strong>Most Used Course:</strong> <span id="stat-top-course">N/A</span></li>
+							<li><strong>Top Rated Company:</strong> <span id="stat-top-company">N/A</span></li>
+							<li><strong>Top Company by Internship Count:</strong> <span id="stat-most-interns">N/A</span></li>
+						</ul>
+						<h4>Generate Statistics Report:</h4>
+						<button id="generate-report" class="button small primary" style="margin-top:1em;">
+							<i class="fas fa-file-pdf"></i> Download Report as PDF
+						</button>
+						<a id="download-link" download="internship_report.txt" style="display:none;"></a>
 					</div>
 				</section>
-
 			</div>
+		</section>
 
+	</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	<!-- Footer -->
+	<footer id="footer" class="wrapper alt">
+		<div class="inner">
+			<ul class="menu">
+				<li>&copy; Untitled. All rights reserved.</li>
+				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</footer>
 
-	</body>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+	<script>
+		// Sample statistics data
+		const stats = {
+			accepted: 42,
+			rejected: 7,
+			flagged: 3,
+			reviewTime: 2.5, // days
+			topCourse: "Software Engineering",
+			topCompany: "Tech Innovators Inc.",
+			mostInterns: "Future Solutions Ltd."
+		};
+
+		// Update statistics display
+		document.getElementById('stat-accepted').textContent = stats.accepted;
+		document.getElementById('stat-rejected').textContent = stats.rejected;
+		document.getElementById('stat-flagged').textContent = stats.flagged;
+		document.getElementById('stat-review-time').textContent = stats.reviewTime + " days";
+		document.getElementById('stat-top-course').textContent = stats.topCourse;
+		document.getElementById('stat-top-company').textContent = stats.topCompany;
+		document.getElementById('stat-most-interns').textContent = stats.mostInterns;
+
+		// Generate report functionality
+		document.getElementById('generate-report').addEventListener('click', function () {
+			const report =
+				`Internship Cycle Statistics Report
+
+Accepted Reports: ${stats.accepted}
+Rejected Reports: ${stats.rejected}
+Flagged Reports: ${stats.flagged}
+Average Review Time: ${stats.reviewTime} days
+Most Used Course: ${stats.topCourse}
+Top Rated Company: ${stats.topCompany}
+Top Company by Internship Count: ${stats.mostInterns}
+
+Generated on: ${new Date().toLocaleString()}
+`;
+
+			const blob = new Blob([report], { type: 'text/plain' });
+			const url = URL.createObjectURL(blob);
+			const link = document.getElementById('download-link');
+			link.href = url;
+			link.style.display = 'inline-block';
+			link.click();
+			setTimeout(() => {
+				URL.revokeObjectURL(url);
+				link.style.display = 'none';
+			}, 2000);
+		});
+	</script>
+
+</body>
 </html>
